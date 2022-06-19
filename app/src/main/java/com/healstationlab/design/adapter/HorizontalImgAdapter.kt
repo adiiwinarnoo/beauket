@@ -11,7 +11,8 @@ import com.bumptech.glide.load.resource.bitmap.*
 import com.bumptech.glide.request.RequestOptions
 import com.healstationlab.design.databinding.ImgItemBinding
 
-class HorizontalImgAdapter(private val imgList : ArrayList<Any>, val gubun : String ="") : RecyclerView.Adapter<HorizontalImgAdapter.Holder>(){
+class HorizontalImgAdapter(private val imgList : ArrayList<Any>, val gubun : String ="", val edit : String = "")
+    : RecyclerView.Adapter<HorizontalImgAdapter.Holder>(){
 
 
     private lateinit var itemClickListener: ItemClickListener

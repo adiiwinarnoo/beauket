@@ -32,6 +32,8 @@ import com.healstationlab.design.adapter.HorizontalImgAdapter
 import com.healstationlab.design.databinding.ActivityAddChatBinding
 import com.healstationlab.design.databinding.ActivityEditChatBinding
 import com.healstationlab.design.dto.auth
+import com.healstationlab.design.fragment.ChatFragment
+import com.healstationlab.design.model.ImageBoard
 import com.healstationlab.design.resource.ProgressDialog
 import com.healstationlab.design.resource.RetrofitMansae
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -44,6 +46,7 @@ import retrofit2.Response
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 class EditChatActivity : AppCompatActivity() {
     lateinit var binding : ActivityEditChatBinding
@@ -52,7 +55,10 @@ class EditChatActivity : AppCompatActivity() {
 
     var imgAdpater : EditImageAdapter? = null
     val imgList : ArrayList<Any> = arrayListOf()
+    var imgModel :ArrayList<Any> = arrayListOf()
+    var imgModel2 :ArrayList<ImageBoard> = arrayListOf()
     var bodylist:ArrayList<MultipartBody.Part> = arrayListOf()
+    var img : ImageBoard = ImageBoard("")
     var category = ""
     var fileStatusT = "true"
     var fileStatusF = "false"
@@ -65,20 +71,27 @@ class EditChatActivity : AppCompatActivity() {
     var boardId = 0
     var imageDetailComment = ""
     var resultActivity = 0
+    private val chatFragment = ChatFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEditChatBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+//
+//        val bundleObject = intent.extras
+//        imgModel2 = bundleObject?.getSerializable("image") as ArrayList<ImageBoard>
         editComment = intent.getIntExtra("edit-comment",0)
         valueMessage = intent.getStringExtra("value-message").toString()
         imageDetailComment = intent.getStringExtra("image-comment").toString()
+        val stringImg = img.imgUrl
         boardId = intent.getIntExtra("id-comment",0)
+
         Log.d("edit-comment", "comment:  ${editComment.toString()}")
         Log.d("edit-comment", "boardId:  ${boardId.toString()}")
         Log.d("edit-comment", "image:  ${imageDetailComment.toString()}")
         Log.d("edit-comment", "value:  ${valueMessage.toString()}")
+        Log.d("edit-comment", "imgmodel:  ${stringImg.toString()}")
+        Log.d("edit-comment", "imgmodel:  ${imgModel2.toString()}")
 
         if (editComment == 1){
             binding.spinner7.clipChildren = false
@@ -88,7 +101,10 @@ class EditChatActivity : AppCompatActivity() {
 //            binding.img.visibility = View.GONE
 ////            binding.imageView114.visibility = View.VISIBLE
 ////            Glide.with(this).load(imageDetailComment).into(binding.img)
-            imgAdpater = EditImageAdapter(imgList, "upload", "true")
+            imgList.add(imageDetailComment)
+            imgAdpater = EditImageAdapter(imgList, "upload","true")
+            imgAdpater!!.notifyDataSetChanged()
+            Log.d("else-adapter-edit", "onCreate: ${imgList.toString()} ")
         }
 
 
@@ -96,9 +112,8 @@ class EditChatActivity : AppCompatActivity() {
             hideKeyboard()
         }
 
-        imgList.add(imageDetailComment)
-        imgAdpater = EditImageAdapter(imgList, "upload2")
-        imgAdpater!!.notifyDataSetChanged()
+//        imgAdpater = EditImageAdapter(imgList, "upload2")
+
 
         val spinnerItems = arrayListOf("자유수다","모공", "블랙헤드", "색소", "주름", "트러블", "민감", "다크서클")
         val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, spinnerItems)
@@ -145,7 +160,11 @@ class EditChatActivity : AppCompatActivity() {
             override fun onDelete(view: View, position: Int) {
 //                binding.img.setImageResource(0)
                 imgList.removeAt(position)
-                bodylist.removeAt(position)
+                Log.d("bodylist", "onDelete: ${bodylist.toString()} ")
+                if (bodylist.size != 0){
+                    Log.d("bodylist", "onDelete: gagal null ")
+                    bodylist.removeAt(position)
+                }
                 imgAdpater!!.notifyDataSetChanged()
             }
         })
@@ -166,8 +185,12 @@ class EditChatActivity : AppCompatActivity() {
             val contents = binding.contentsEdit.text.toString()
             val body = MultipartBody.Part.createFormData("contents", contents)
             val category2 = MultipartBody.Part.createFormData("category", category)
-            val isiStatus = MultipartBody.Part.createFormData("fileStatus",fileStatusT)
+            var isiStatus = MultipartBody.Part.createFormData("fileStatus","false")
             val idBoard = MultipartBody.Part.createFormData("id",boardId.toString())
+            if (bodylist != null){
+                isiStatus =  MultipartBody.Part.createFormData("fileStatus", "true")
+                Log.d("filestatus", "onCreate: ${isiStatus.toString()} ")
+            }
             Log.d("error-yo", "onte: ${category2.body.toString()}")
 
             Log.d("errror-yo", "${contents.toString()},${body.toString()},${category2.toString()},${boardId.toString()},$fileStatusT")
@@ -175,7 +198,7 @@ class EditChatActivity : AppCompatActivity() {
 //            Log.d("isi-data", "onCreate: ${bodylist.toString()}")
             Log.d("isi-data", "onCreate: ${category2.toString()}")
             Log.d("isi-data", "onCreate: ${boardId.toString()}")
-            Log.d("isi-data", "onCreate: ${fileStatusF.toString()}")
+            Log.d("isi-data", "onCreate: ${isiStatus.toString()}")
             editBoard(body,bodylist,category2,idBoard,isiStatus)
 
         }
@@ -286,10 +309,14 @@ class EditChatActivity : AppCompatActivity() {
                     when(response.body()?.responseCode){
                         "SUCCESS" -> {
                             Toast.makeText(this@EditChatActivity, "게시물 추가 완료!", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this@EditChatActivity,MainActivity::class.java)
+                            intent.putExtra("home","true")
+                            startActivity(intent)
                             setResult(Activity.RESULT_OK)
                             finish()
                         }
                         "FAIL" -> {
+                            Toast.makeText(this@EditChatActivity, "gagal", Toast.LENGTH_SHORT).show()
                             Toast.makeText(this@EditChatActivity, response.body()!!.message, Toast.LENGTH_SHORT).show()
                             dialog.dismiss()
                         }

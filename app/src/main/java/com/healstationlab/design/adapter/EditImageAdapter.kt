@@ -28,6 +28,9 @@ class EditImageAdapter(private val imgList : ArrayList<Any>, val gubun : String 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
 
         val binding = ImgItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        if (imgList == null){
+            binding.imageView114.isVisible = false
+        }
         Log.d("comment-adapter", "adapter:  ${imgList.toString()}")
         return Holder(binding)
     }
@@ -58,12 +61,14 @@ class EditImageAdapter(private val imgList : ArrayList<Any>, val gubun : String 
 
         fun bind(img_any : Any){
             Glide.with(itemView).load(img_any).apply(RequestOptions.centerInsideTransform().transform(GranularRoundedCorners(8f, 8f,8f,8f))).into(img)
-            if(gubun != "upload" && edited != "true"){
-                Log.d("else-adapter-edit", "wrong with you1")
-                imageView114.isVisible = false
-            }else if (gubun == "upload" && edited == "true"){
+            if(edited == "true" && imgList.isEmpty()){
+                    Log.d("else-adapter-edit", "wrong with you1")
+                    imageView114.isVisible = true
+            }else if (gubun != "upload" && edited != "true"){
                 Log.d("else-adapter-edit", "true with you")
-                imageView114.isVisible = true
+                imageView114.isVisible = false
+            }else if (imgList == null){
+                imageView114.isVisible = false
             }else{
                 Log.d("else-adapter-edit", "wrong with you")
             }

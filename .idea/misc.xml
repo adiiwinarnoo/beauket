@@ -3,77 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable-mdpi/btn_new_radius_home.xml" value="0.168" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable-mdpi/button_popup_attendance.xml" value="0.168" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable-v24/ic_download.xml" value="0.164" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable-v24/menu_select_color.xml" value="0.1" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/button_full.xml" value="0.166" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/button_product_use.xml" value="0.166" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/button_radius_shadow.xml" value="0.168" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/button_setting.xml" value="0.164" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/button_setting_2.xml" value="0.1" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/check_produk_use.xml" value="0.166" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/item_popup_answer_banner.xml" value="0.168" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/item_popup_new_banner.xml" value="0.168" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/menu_select_color.xml" value="0.168" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/oval.xml" value="0.166" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/oval_white.xml" value="0.166" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/popup_delete.xml" value="0.166" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/round_top.xml" value="0.1" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/drawable/stroke_green.xml" value="0.164" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_add_chat.xml" value="0.33" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_attendance.xml" value="0.33" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_category_product.xml" value="0.67" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_detail_chat.xml" value="0.22" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_edit_chat.xml" value="0.30085470085470084" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_my_face.xml" value="0.18" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_my_page.xml" value="0.25" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_my_skin_result_list.xml" value="0.30085470085470084" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_no_data.xml" value="0.15427350427350428" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_product_use.xml" value="0.33" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_report.xml" value="0.22" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_report6.xml" value="0.2" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_select_login.xml" value="0.29743589743589743" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_setting.xml" value="0.25" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_sign_up_popup.xml" value="0.25" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_singup.xml" value="0.25" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_test_button.xml" value="0.30085470085470084" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_user_skin_info.xml" value="0.2" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_welcome_screen.xml" value="0.29743589743589743" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/category_item.xml" value="0.33" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/chat_item.xml" value="0.2836676217765043" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/comment_item.xml" value="0.33" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/fragment_all.xml" value="0.25" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/fragment_chat.xml" value="0.2" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/fragment_my_page.xml" value="0.33" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/fragment_shopping.xml" value="0.22" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/fragment_skin.xml" value="0.33" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/home_viewapger_item.xml" value="0.30085470085470084" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/img_item.xml" value="0.19914529914529913" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/list_pop_new_banner.xml" value="0.25" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/new_banner_for_home.xml" value="0.18637067630356222" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/new_popup_banner_home.xml" value="0.33" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/popup_attendance.xml" value="0.5" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/popup_delete.xml" value="0.3" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/popup_home_2_onclick.xml" value="0.2463768115942029" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/popup_home_new_onclick.xml" value="0.2463768115942029" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/popup_new_banner_2.xml" value="0.33" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/popup_new_banner_home.xml" value="0.30085470085470084" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/popup_shopping_new.xml" value="0.30085470085470084" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/result_list_item.xml" value="0.67" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/viepager_category_item.xml" value="0.14703425229741018" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/welcome_screen.xml" value="0.29743589743589743" />
-        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/menu/menu.xml" value="0.1" />
+        <entry key="..\:/Users/adi winarno/AndroidStudioProjects/beauket/app/src/main/res/layout/activity_add_chat.xml" value="0.2" />
+        <entry key="..\:/Users/adi winarno/AndroidStudioProjects/beauket/app/src/main/res/layout/activity_detail_chat.xml" value="0.264" />
+        <entry key="..\:/Users/adi winarno/AndroidStudioProjects/beauket/app/src/main/res/layout/activity_edit_chat.xml" value="0.2" />
+        <entry key="..\:/Users/adi winarno/AndroidStudioProjects/beauket/app/src/main/res/layout/activity_my_page.xml" value="0.264" />
+        <entry key="..\:/Users/adi winarno/AndroidStudioProjects/beauket/app/src/main/res/layout/fragment_my_page.xml" value="0.2" />
+        <entry key="..\:/Users/adi winarno/AndroidStudioProjects/beauket/app/src/main/res/layout/img_item.xml" value="0.23802083333333332" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

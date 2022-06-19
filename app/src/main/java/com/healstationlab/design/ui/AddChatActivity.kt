@@ -146,7 +146,12 @@ class AddChatActivity : AppCompatActivity() {
             val contents = binding.contentsEdit.text.toString()
             val body = MultipartBody.Part.createFormData("contents", contents)
             val category2 = MultipartBody.Part.createFormData("category", category)
-            postBoard(body,bodylist, category2)
+            var fileStatus = MultipartBody.Part.createFormData("fileStatus", "false")
+            if (bodylist != null){
+                fileStatus =  MultipartBody.Part.createFormData("fileStatus", "true")
+                Log.d("filestatus", "onCreate: ${fileStatus.toString()} ")
+            }
+            postBoard(body,bodylist, category2,fileStatus)
         }
 
         /** 뒤로가기 **/
@@ -238,12 +243,13 @@ class AddChatActivity : AppCompatActivity() {
         }
     }
 
-    private fun postBoard(contents : MultipartBody.Part, files : ArrayList<MultipartBody.Part>, category : MultipartBody.Part){
+    private fun postBoard(contents : MultipartBody.Part, files : ArrayList<MultipartBody.Part>, category : MultipartBody.Part,
+                          fileStatus : MultipartBody.Part){
         val dialog= ProgressDialog.progressDialog(this)
         dialog.setCanceledOnTouchOutside(false)
         dialog.setCancelable(false)
         dialog.show()
-        RetrofitMansae.server.postBoard(contents = contents,files = files, category = category)
+        RetrofitMansae.server.postBoard(contents = contents,files = files, category = category, fileStatus = fileStatus)
                 .enqueue(object : Callback<auth>{
                     override fun onFailure(call: Call<auth>, t: Throwable) {
                     }

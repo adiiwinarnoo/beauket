@@ -13,4 +13,10 @@ class ImageBoard (imgUrl : String) {
     fun setImage(image: Int?){
         this.imgUrl
     }
+
+    override fun toString(): String {
+        return "$imgUrl"
+    }
+
+
 }

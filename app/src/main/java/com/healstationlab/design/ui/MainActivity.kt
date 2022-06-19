@@ -51,9 +51,32 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMyPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val intent = Intent()
+        val intent2 = getIntent()
+
+        //edit by adi
+        var fromEdit = intent2.getStringExtra("home")
+        Log.d("fromEdit", "onCreate: ${fromEdit.toString()} ")
+
+        if (fromEdit.equals("true")){
+            binding.bottomNavigationView.selectedItemId = R.id.chat
+            binding.bottomNavigationView.menu.getItem(0).setIcon(R.drawable.home)
+            binding.bottomNavigationView.menu.getItem(2).setIcon(R.drawable.event)
+            binding.bottomNavigationView.menu.getItem(3).setIcon(R.drawable.chatting_new)
+            binding.bottomNavigationView.menu.getItem(1).setIcon(R.drawable.shopping) // 요거 핸들링
+            val fragmentManager = supportFragmentManager
+            val fragmentTransaction : FragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.frame, chatFragment).commit()
+        }else{
+            getMeitu()
+            if(Constant.meituCheck){
+                getMeitu()
+            } else {
+                Constant.meituCheck = true
+            }
+        }
 
         //add by adi
-        getMeitu()
+//        getMeitu()
         statusCheck = intent.getBooleanExtra("status-check",true)
         idNoData = intent.getIntExtra("no-data-after-survey",1)
 //        when(App.prefs.getBooleanData(Constant.autoLogin)){
@@ -147,11 +170,12 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        if(Constant.meituCheck){
-            getMeitu()
-        } else {
-            Constant.meituCheck = true
-        }
+        //edit by adi
+//        if(Constant.meituCheck){
+//            getMeitu()
+//        } else {
+//            Constant.meituCheck = true
+//        }
     }
 
     // Fragment Change

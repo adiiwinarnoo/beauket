@@ -27,6 +27,7 @@ import com.healstationlab.design.dto.auth
 import com.healstationlab.design.dto.comment
 import com.healstationlab.design.dto.detailChat
 import com.healstationlab.design.dto.user
+import com.healstationlab.design.model.Chat
 import com.healstationlab.design.model.Comment
 import com.healstationlab.design.model.ImageBoard
 import com.healstationlab.design.resource.App
@@ -41,7 +42,8 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
 //    var resRaw = ""
     val commentList : ArrayList<Comment> = arrayListOf()
     var imgList : ArrayList<Any> = arrayListOf()
-    var imgModel : ArrayList<ImageBoard> = arrayListOf()
+    var imgModel : ArrayList<Any> = arrayListOf()
+    var imgModel2 : ArrayList<ImageBoard> = arrayListOf()
     var commentAdapter : CommentAdapter? = null
     var category = ""
 
@@ -80,6 +82,17 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
             btnEdit.setOnClickListener {
                 val intent = Intent(this, EditChatActivity::class.java)
                 intent.putExtra("edit-comment",1)
+                for (i in imgList){
+                    imgModel.add(i.toString())
+                    imgModel2.add(ImageBoard(i.toString()))
+                }
+//                val bundle = Bundle()
+//                bundle.putSerializable("image",imgModel2)
+//                intent.putExtras(bundle)
+                Log.d("imgmodel", "onCreate23: ${imgModel.toString()} ")
+                Log.d("imgmodel", "onCreate231: ${imgModel2.toString()} ")
+//                intent.putExtra("image",imgModel)
+//                intent.putExtra("image", imgModel2)
                 intent.putExtra("image-comment",imageDetail)
                 intent.putExtra("id-comment",id)
                 intent.putExtra("result-activity",-1)
@@ -183,7 +196,7 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
                             if(response.body()?.data?.imageUrls!!.isNotEmpty()){
                                 imgList = response.body()!!.data.imageUrls
 //                                imgModel.addAll(imgList)
-                                Log.d(" edit-comment", "onResponse: ${imgList.toString()} ")
+                                Log.d(" edit-comment", "onResponse2: ${imgList.toString()} ")
                                 for (i in imgList){
 //                                    imgModel.addAll(imgList)
                                     imageDetail = i.toString()
