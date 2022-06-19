@@ -4,6 +4,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -57,12 +58,16 @@ class EditImageAdapter(private val imgList : ArrayList<Any>, val gubun : String 
 
         fun bind(img_any : Any){
             Glide.with(itemView).load(img_any).apply(RequestOptions.centerInsideTransform().transform(GranularRoundedCorners(8f, 8f,8f,8f))).into(img)
-            if(gubun != "upload"){
+            if(gubun != "upload" && edited != "true"){
+                Log.d("else-adapter-edit", "wrong with you1")
                 imageView114.isVisible = false
-            }
-            if (edited == "true"){
+            }else if (gubun == "upload" && edited == "true"){
+                Log.d("else-adapter-edit", "true with you")
                 imageView114.isVisible = true
+            }else{
+                Log.d("else-adapter-edit", "wrong with you")
             }
+
         }
     }
 }

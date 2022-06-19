@@ -88,10 +88,7 @@ class EditChatActivity : AppCompatActivity() {
 //            binding.img.visibility = View.GONE
 ////            binding.imageView114.visibility = View.VISIBLE
 ////            Glide.with(this).load(imageDetailComment).into(binding.img)
-            imgList.add(imageDetailComment)
-            Log.d("comment", "onCreate: ${imgList.size.toString()}")
-            imgAdpater = EditImageAdapter(imgList, "upload","true")
-            imgAdpater!!.notifyDataSetChanged()
+            imgAdpater = EditImageAdapter(imgList, "upload", "true")
         }
 
 
@@ -99,7 +96,9 @@ class EditChatActivity : AppCompatActivity() {
             hideKeyboard()
         }
 
-        imgAdpater = EditImageAdapter(imgList, "upload")
+        imgList.add(imageDetailComment)
+        imgAdpater = EditImageAdapter(imgList, "upload2")
+        imgAdpater!!.notifyDataSetChanged()
 
         val spinnerItems = arrayListOf("자유수다","모공", "블랙헤드", "색소", "주름", "트러블", "민감", "다크서클")
         val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, spinnerItems)
@@ -146,7 +145,7 @@ class EditChatActivity : AppCompatActivity() {
             override fun onDelete(view: View, position: Int) {
 //                binding.img.setImageResource(0)
                 imgList.removeAt(position)
-//                bodylist.removeAt(position)
+                bodylist.removeAt(position)
                 imgAdpater!!.notifyDataSetChanged()
             }
         })
@@ -167,7 +166,7 @@ class EditChatActivity : AppCompatActivity() {
             val contents = binding.contentsEdit.text.toString()
             val body = MultipartBody.Part.createFormData("contents", contents)
             val category2 = MultipartBody.Part.createFormData("category", category)
-            val isiStatus = MultipartBody.Part.createFormData("fileStatus",fileStatusF)
+            val isiStatus = MultipartBody.Part.createFormData("fileStatus",fileStatusT)
             val idBoard = MultipartBody.Part.createFormData("id",boardId.toString())
             Log.d("error-yo", "onte: ${category2.body.toString()}")
 
@@ -177,7 +176,7 @@ class EditChatActivity : AppCompatActivity() {
             Log.d("isi-data", "onCreate: ${category2.toString()}")
             Log.d("isi-data", "onCreate: ${boardId.toString()}")
             Log.d("isi-data", "onCreate: ${fileStatusF.toString()}")
-            editBoard(body,category2,idBoard,isiStatus)
+            editBoard(body,bodylist,category2,idBoard,isiStatus)
 
         }
 
@@ -272,12 +271,12 @@ class EditChatActivity : AppCompatActivity() {
         }
     }
 
-    private fun editBoard(contents : MultipartBody.Part, category : MultipartBody.Part, id : MultipartBody.Part, fileStatus : MultipartBody.Part){
+    private fun editBoard(contents : MultipartBody.Part, files : ArrayList<MultipartBody.Part>, category : MultipartBody.Part, id : MultipartBody.Part, fileStatus : MultipartBody.Part){
         val dialog= ProgressDialog.progressDialog(this)
         dialog.setCanceledOnTouchOutside(false)
         dialog.setCancelable(false)
         dialog.show()
-        RetrofitMansae.server.editBoard(contents = contents, category = category, id = id, fileStatus = fileStatus)
+        RetrofitMansae.server.editBoard(contents = contents, files = files , category = category, id = id, fileStatus = fileStatus)
             .enqueue(object : Callback<auth>{
                 override fun onFailure(call: Call<auth>, t: Throwable) {
                 }

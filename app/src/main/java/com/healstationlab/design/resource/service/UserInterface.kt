@@ -388,6 +388,7 @@ interface UserInterface {
            @Header("Authorization") authorization : String = App.prefs.getStringData(Constant.AUTH).toString(),
            @Part contents : MultipartBody.Part,
            @Part category : MultipartBody.Part,
+           @Part files : ArrayList<MultipartBody.Part>,
            @Part id : MultipartBody.Part,
            @Part fileStatus : MultipartBody.Part
        ) : Call<auth>
