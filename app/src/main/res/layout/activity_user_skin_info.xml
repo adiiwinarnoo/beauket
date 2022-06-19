@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/back"
+    android:layout_height="match_parent"
+    tools:context=".ui.EditProfileActivity">
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="프로필 수정"
+        android:textColor="#323232"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView76"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView76"
+        tools:ignore="HardcodedText"  />
+
+    <ImageView
+        android:id="@+id/imageView76"
+        android:layout_width="70dp"
+        android:layout_height="53.3dp"
+        android:background="@drawable/left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView76"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/back2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName3"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_radius_gray"
+                android:hint="비밀번호"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:textColor="#323232"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/auth_button3"
+                app:layout_constraintStart_toStartOf="@+id/textView57"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6"
+                tools:ignore="Autofill,HardcodedText,RtlSymmetry"  />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName6"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_radius_gray"
+                android:hint="닉네임"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:textColor="#323232"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/auth_button3"
+                app:layout_constraintStart_toStartOf="@+id/textView57"
+                app:layout_constraintTop_toBottomOf="@+id/textView45"
+                tools:ignore="Autofill,HardcodedText,RtlHardcoded,RtlSymmetry"  />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="7dp"
+                app:layout_constraintBottom_toBottomOf="@+id/year_spinner"
+                app:layout_constraintEnd_toEndOf="@+id/year_spinner"
+                app:layout_constraintTop_toTopOf="@+id/year_spinner"
+                app:srcCompat="@drawable/spinner_arrow"
+                tools:ignore="ContentDescription" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView11"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="90dp"
+                android:src="@drawable/ic_circle_prifile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView61" />
+
+            <ImageView
+                android:id="@+id/imageView69"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+                app:layout_constraintEnd_toEndOf="@+id/imageView11"
+                app:layout_constraintStart_toStartOf="@+id/imageView11"
+                app:layout_constraintTop_toTopOf="@+id/imageView11"
+                app:srcCompat="@drawable/add_button"
+                tools:ignore="ContentDescription" />
+
+            <EditText
+                android:id="@+id/year_spinner"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_radius_gray"
+                android:enabled="false"
+                android:textSize="13sp"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/child_no_btn"
+                app:layout_constraintStart_toStartOf="@+id/femail_btn"
+                app:layout_constraintTop_toBottomOf="@+id/child_yes_btn"
+                tools:ignore="Autofill,MissingConstraints,RtlSymmetry,TextFields" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/notosans_medium"
+                android:includeFontPadding="false"
+                android:text="기본정보"
+                android:textColor="#323232"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view33"
+                tools:ignore="HardcodedText"  />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="이메일"
+                android:textColor="#727272"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/textView44"
+                app:layout_constraintTop_toBottomOf="@+id/textView44"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호"
+                android:textColor="#727272"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName3"
+                app:layout_constraintStart_toStartOf="@+id/textView56"
+                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName3"
+                tools:ignore="HardcodedText"  />
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="닉네임"
+                android:textColor="#727272"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName6"
+                app:layout_constraintStart_toStartOf="@+id/textView45"
+                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName6"
+                tools:ignore="HardcodedText"  />
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:text="wonhye2724@naver.com"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView45"
+                app:layout_constraintStart_toEndOf="@+id/textView45"
+                app:layout_constraintTop_toTopOf="@+id/textView45"
+                tools:ignore="HardcodedText"  />
+
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/notosans_medium"
+                android:includeFontPadding="false"
+                android:text="상세정보"
+                android:textColor="#323232"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/textView44"
+                app:layout_constraintTop_toBottomOf="@+id/view34"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView98"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="3dp"
+                android:text="나에게 맞는 화장품 정보를 보는데 쓰여요"
+                android:textColor="#929292"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView59"
+                app:layout_constraintStart_toEndOf="@+id/textView59"
+                app:layout_constraintTop_toTopOf="@+id/textView59"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="성별"
+                android:textColor="#727272"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/textView59"
+                app:layout_constraintTop_toBottomOf="@+id/textView59"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView102"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자녀여부"
+                android:textColor="#727272"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/child_yes_btn"
+                app:layout_constraintStart_toStartOf="@+id/textView100"
+                app:layout_constraintTop_toTopOf="@+id/child_yes_btn"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="생년월일"
+                android:textColor="#727272"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/year_spinner"
+                app:layout_constraintStart_toStartOf="@+id/textView102"
+                app:layout_constraintTop_toTopOf="@+id/year_spinner"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView106"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="피부타입"
+                android:textColor="#727272"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/gun"
+                app:layout_constraintStart_toStartOf="@+id/textView107"
+                app:layout_constraintTop_toTopOf="@+id/gun"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView103"
+                android:lines="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="개선을 \n희망하는 문제"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/nothing"
+                app:layout_constraintStart_toStartOf="@+id/textView106"
+                app:layout_constraintTop_toTopOf="@+id/nothing"
+                tools:ignore="HardcodedText"  />
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="다중선택가능"
+                android:textColor="#F8849B"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textView103"
+                app:layout_constraintTop_toBottomOf="@+id/textView103"
+                tools:ignore="HardcodedText,SmallSp" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/notosans_medium"
+                android:text="프로필 사진"
+                android:textColor="#323232"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/textView44"
+                app:layout_constraintTop_toBottomOf="@+id/view35"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView373"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosans_medium"
+                android:text="설문조사"
+                android:textColor="#323232"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/skin_date_text"
+                app:layout_constraintStart_toStartOf="@+id/textView103"
+                app:layout_constraintTop_toBottomOf="@+id/textView60"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView383"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="피부분석 데이터가 없으신분은 설문을 진행해주세요."
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/skin_date_text"
+                app:layout_constraintTop_toBottomOf="@+id/skin_date_text"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/skin_date_text"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="@color/main_theme"
+                android:gravity="center"
+                android:text="설문하기"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView383"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/textView373"
+                app:layout_constraintTop_toBottomOf="@+id/textView373"
+                tools:ignore="HardcodedText"  />
+
+            <View
+                android:id="@+id/view33"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginTop="30dp"
+                android:background="#F2F5F5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+            <View
+                android:id="@+id/view34"
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="20dp"
+                android:background="#F2F5F5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
+
+            <View
+                android:id="@+id/view35"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:background="#F2F5F5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/gun"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_radius_empty"
+                android:fontFamily="@font/notosans_medium"
+                android:text="건성"
+                android:textColor="#727272"
+                android:textSize="12.7sp"
+                app:layout_constraintEnd_toStartOf="@+id/joong"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/year_spinner"
+                app:layout_constraintTop_toBottomOf="@+id/year_spinner"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/joong"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_radius_empty"
+                android:fontFamily="@font/notosans_medium"
+                android:text="중성"
+                android:textColor="#727272"
+                android:textSize="12.7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/gun"
+                app:layout_constraintEnd_toStartOf="@+id/ji"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/gun"
+                app:layout_constraintTop_toTopOf="@+id/gun"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/ji"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_radius_empty"
+                android:fontFamily="@font/notosans_medium"
+                android:text="지성"
+                android:textColor="#727272"
+                android:textSize="12.7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/joong"
+                app:layout_constraintEnd_toStartOf="@+id/bok"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/joong"
+                app:layout_constraintTop_toTopOf="@+id/joong"
+                tools:ignore="HardcodedText"  />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bok"
+                android:layout_width="66dp"
+                android:layout_height="0dp"
+                android:background="@drawable/border_radius_empty"
+                android:fontFamily="@font/notosans_medium"
+                android:text="복합성"
+                android:textColor="#727272"
+                android:textSize="12.7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/gun"
+                app:layout_constraintEnd_toEndOf="@+id/year_spinner"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ji"
+                app:layout_constraintTop_toTopOf="@+id/gun"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/min"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/border_radius_empty"
+                android:fontFamily="@font/notosans_medium"
+                android:text="민감성"
+                android:textColor="#727272"
+                android:textSize="12.7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/yudrm"
+                app:layout_constraintEnd_toEndOf="@+id/bok"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/yudrm"
+                app:layout_constraintTop_toTopOf="@+id/yudrm"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/atophy"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_radius_empty"
+                android:fontFamily="@font/notosans_medium"
+                android:text="다크서클"
+                android:textColor="#727272"
+                android:textSize="12.7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/nothing"
+                app:layout_constraintEnd_toStartOf="@+id/yudrm"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/nothing"
+                app:layout_constraintTop_toTopOf="@+id/nothing"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nothing"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_radius_empty"
+                android:fontFamily="@font/notosans_medium"
+                android:text="해당없음"
+                android:textColor="#727272"
+                android:textSize="12.7sp"
+                app:layout_constraintEnd_toStartOf="@+id/atophy"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/year_spinner"
+                app:layout_constraintTop_toBottomOf="@+id/gun"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sac"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/border_radius_empty"
+                android:fontFamily="@font/notosans_medium"
+                android:text="색조반점"
+                android:textColor="#727272"
+                android:textSize="12.7sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView373"
+                app:layout_constraintEnd_toStartOf="@+id/black"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/year_spinner"
+                app:layout_constraintTop_toBottomOf="@+id/nothing"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mo"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/border_radius_empty"
+                android:fontFamily="@font/notosans_medium"
+                android:text="모공"
+                android:textColor="#727272"
+                android:textSize="12.7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/joo"
+                app:layout_constraintEnd_toEndOf="@+id/min"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/joo"
+                app:layout_constraintTop_toTopOf="@+id/joo"
+                tools:ignore="HardcodedText"  />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/joo"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_radius_empty"
+                android:fontFamily="@font/notosans_medium"
+                android:text="주름"
+                android:textColor="#727272"
+                android:textSize="12.7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/black"
+                app:layout_constraintEnd_toStartOf="@+id/mo"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/black"
+                app:layout_constraintTop_toTopOf="@+id/black"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/black"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_radius_empty"
+                android:fontFamily="@font/notosans_medium"
+                android:text="블랙헤드"
+                android:textColor="#727272"
+                android:textSize="12.7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/sac"
+                app:layout_constraintEnd_toStartOf="@+id/joo"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/sac"
+                app:layout_constraintTop_toTopOf="@+id/sac"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/yudrm"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_radius_empty"
+                android:fontFamily="@font/notosans_medium"
+                android:text="여드름"
+                android:textColor="#727272"
+                android:textSize="12.7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/atophy"
+                app:layout_constraintEnd_toStartOf="@+id/min"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/atophy"
+                app:layout_constraintTop_toTopOf="@+id/atophy"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="HardcodedText"  />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/auth_button3"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/border_radius_dark_gray"
+                android:text="중복체크"
+                android:textColor="#ffffff"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName6"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/child_no_btn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/border_gray_stroke"
+                android:fontFamily="@font/notosans_medium"
+                android:stateListAnimator="@null"
+                android:text="없음"
+                app:layout_constraintBottom_toBottomOf="@+id/child_yes_btn"
+                app:layout_constraintEnd_toEndOf="@+id/mail_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/child_yes_btn"
+                app:layout_constraintTop_toTopOf="@+id/child_yes_btn"
+                tools:ignore="HardcodedText" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/child_yes_btn"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_gray_stroke"
+                android:fontFamily="@font/notosans_medium"
+                android:stateListAnimator="@null"
+                android:text="있음"
+                app:layout_constraintEnd_toStartOf="@+id/child_no_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/femail_btn"
+                app:layout_constraintTop_toBottomOf="@+id/femail_btn"
+                tools:ignore="HardcodedText"  />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/mail_btn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/border_gray_stroke"
+                android:fontFamily="@font/notosans_medium"
+                android:stateListAnimator="@null"
+                android:text="남자"
+                app:layout_constraintBottom_toBottomOf="@+id/femail_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/femail_btn"
+                app:layout_constraintTop_toTopOf="@+id/femail_btn"
+                tools:ignore="HardcodedText" >
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/femail_btn"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/border_gray_stroke"
+                android:fontFamily="@font/notosans_medium"
+                android:stateListAnimator="@null"
+                android:text="여자"
+                app:layout_constraintBottom_toBottomOf="@+id/textView100"
+                app:layout_constraintEnd_toStartOf="@+id/mail_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/textView100"
+                app:layout_constraintTop_toTopOf="@+id/textView100"
+                tools:ignore="HardcodedText"  />
+
+            <TextView
+                android:textSize="13sp"
+                android:id="@+id/textView414"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호 확인"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName14"
+                app:layout_constraintStart_toStartOf="@+id/textView55"
+                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName14"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName14"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_radius_gray"
+                android:ems="10"
+                android:hint="비밀번호 확인"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:textColor="#323232"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+                tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/main_theme"
+        android:id="@+id/confirm_button"
+        android:layout_width="0dp"
+        android:layout_height="46.7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:fontFamily="@font/dream5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="완료"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/confirm_button"
+        app:layout_constraintEnd_toEndOf="@+id/confirm_button"
+        app:layout_constraintStart_toStartOf="@+id/confirm_button"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView4"
+        tools:ignore="HardcodedText"  />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

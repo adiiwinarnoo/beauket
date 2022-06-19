@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:src="@drawable/pro2"
+        android:id="@+id/profile_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/nick_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="닉네임"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/profile_img"
+        app:layout_constraintTop_toTopOf="@+id/profile_img"
+        tools:ignore="HardcodedText"  />
+
+    <TextView
+
+        android:id="@+id/user_info_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="20대 | 민감성 | 여드름"
+        android:textColor="@color/main_theme"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/nick_name_text"
+        app:layout_constraintTop_toBottomOf="@+id/nick_name_text"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/register_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="2020.11.22"
+        android:textColor="#929292"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/nick_name_text"
+        app:layout_constraintTop_toBottomOf="@+id/user_info_text"
+        tools:ignore="HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="test\ntest\n\test\n asd"
+        android:textColor="#323232"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/profile_img"
+        app:layout_constraintTop_toBottomOf="@+id/register_date"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/show_all_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="자세히보기  >"
+        android:textColor="#727272"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/view37"
+        app:layout_constraintStart_toStartOf="@+id/content_text"
+        app:layout_constraintTop_toBottomOf="@+id/content_text"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:id="@+id/view37"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginEnd="20dp"
+        android:background="
+#dbdbdb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/profile_img" />
+</androidx.constraintlayout.widget.ConstraintLayout>

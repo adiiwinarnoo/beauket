@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.AgreementActivity"
+    tools:ignore="HardcodedText, ContentDescription, RtlHardcoded,RtlSymmetry, SmallSp">
+
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#323232"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="약관보기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:fontFamily="@font/right"
+        android:background="#F2F5F5"
+        android:id="@+id/textView39"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="17dp"
+        android:paddingLeft="30dp"
+        android:paddingTop="30dp"
+        android:paddingRight="30dp"
+        android:text="제1장 총 칙\n\n제1조 (목적)\n본 약관은 국민건강보험공단(이하 공단)사이트가 제공하는 서비 스(이하 서비스)의 이용조건·절차, 공단과 이용자·회원의 권리· 의무·책임사항 및 그 밖에 필요한 사항을 규정함을 목적으로 합니다.\n\n제2조 (약관의 효력과 변경)"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/back_arrow_button"
+        android:layout_width="70dp"
+        android:layout_height="53.3dp"
+        android:background="@drawable/left_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

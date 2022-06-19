@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddAddressActivity"
+    tools:ignore="HardcodedText, ContentDescription, RtlHardcoded,RtlSymmetry, SmallSp">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="70dp"
+        android:layout_height="53.3dp"
+        android:background="@drawable/left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView280"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="신규 배송지 등록"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_button" />
+
+    <View
+        android:id="@+id/view86"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:background="#F2F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_button" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view86">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/checkBox7"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_checkbox"
+                android:button="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView282"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="주문자 정보와 동일"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/checkBox7"
+                app:layout_constraintStart_toEndOf="@+id/checkBox7"
+                app:layout_constraintTop_toTopOf="@+id/checkBox7" />
+
+            <TextView
+                android:id="@+id/textView289"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:text="전화번호"
+                app:layout_constraintStart_toStartOf="@+id/textView290"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <TextView
+                android:id="@+id/textView290"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="이름"
+                app:layout_constraintStart_toStartOf="@+id/checkBox7"
+                app:layout_constraintTop_toBottomOf="@+id/textView282" />
+
+            <EditText
+                android:hint="전화번호를 입력해주세요"
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                android:id="@+id/phone"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:background="@drawable/login_background"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="@+id/textView289"
+                app:layout_constraintEnd_toEndOf="@+id/name"
+                app:layout_constraintStart_toStartOf="@+id/name"
+                app:layout_constraintTop_toTopOf="@+id/textView289"
+                tools:ignore="Autofill,TextFields" />
+
+            <EditText
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                android:hint="이름을 입력해주세요"
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/login_background"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="@+id/textView290"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView290"
+                app:layout_constraintTop_toTopOf="@+id/textView290"
+                tools:ignore="Autofill" />
+
+            <EditText
+
+                android:id="@+id/detail"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/login_background"
+                android:ems="10"
+                android:hint="상세 주소를 입력해주세요"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/address_road_text"
+                app:layout_constraintStart_toStartOf="@+id/address_road_text"
+                app:layout_constraintTop_toBottomOf="@+id/address_road_text"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:id="@+id/textView293"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주소"
+                app:layout_constraintBottom_toBottomOf="@+id/address_text"
+                app:layout_constraintStart_toStartOf="@+id/textView289"
+                app:layout_constraintTop_toTopOf="@+id/address_text" />
+
+            <TextView
+                android:id="@+id/address_text"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/login_background"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/search_address"
+                app:layout_constraintStart_toStartOf="@+id/phone"
+                app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+            <TextView
+                android:id="@+id/address_road_text"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/login_background"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/search_address"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/address_text"
+                app:layout_constraintTop_toBottomOf="@+id/address_text" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/search_address"
+                android:layout_width="70dp"
+                android:layout_height="0dp"
+                android:background="@drawable/stroke_green"
+                android:text="주소 찾기"
+                android:textColor="@color/main_theme"
+                app:layout_constraintBottom_toBottomOf="@+id/address_text"
+                app:layout_constraintEnd_toEndOf="@+id/phone"
+                app:layout_constraintTop_toTopOf="@+id/address_text" />
+
+            <TextView
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/main_theme"
+                android:id="@+id/textView297"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="등록"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

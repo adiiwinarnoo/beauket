@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="10dp">
+
+
+    <View
+        android:id="@+id/view51"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/border_radius_shadow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/skin_backgorund"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/melanin"
+        app:layout_constraintStart_toStartOf="@+id/textView148"
+        app:layout_constraintTop_toBottomOf="@+id/textView152"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/detail_img"
+        android:layout_width="10dp"
+        android:layout_height="7dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/down_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView166"
+        app:layout_constraintStart_toEndOf="@+id/textView166"
+        app:layout_constraintTop_toTopOf="@+id/textView166"
+        tools:ignore="ContentDescription" />
+
+
+    <SeekBar
+        android:id="@+id/score"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:clickable="false"
+        android:max="100"
+        android:maxHeight="8dp"
+        android:paddingStart="7dp"
+        android:paddingEnd="5dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/gradation_spinner"
+        android:splitTrack="false"
+        android:thumb="@drawable/seekbar_thumb"
+        app:layout_constraintEnd_toStartOf="@+id/textView151"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView148"
+        app:layout_constraintTop_toBottomOf="@+id/total" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="32dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/suchi"
+        android:backgroundTint="@color/main_theme"
+        android:gravity="center"
+        android:paddingBottom="9dp"
+        android:text="@string/_100"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView148"
+        app:layout_constraintTop_toBottomOf="@+id/level" />
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/dream5"
+        android:text=""
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view51" />
+
+    <TextView
+        android:id="@+id/textView148"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/_0"
+        android:textColor="#727272"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/score"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/score" />
+
+    <TextView
+        android:id="@+id/textView151"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/_100"
+        android:textColor="#727272"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/score" />
+
+    <TextView
+        android:id="@+id/textView152"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/notosans_regular"
+        android:text="@string/가속"
+        android:textColor="#323232"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/textView148"
+        app:layout_constraintTop_toBottomOf="@+id/score" />
+
+    <TextView
+        android:id="@+id/textView153"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosans_regular"
+        android:text="@string/감속"
+        android:textColor="#323232"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView152"
+        app:layout_constraintEnd_toEndOf="@+id/score" />
+
+    <TextView
+        android:id="@+id/sub_level3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosans_medium"
+        android:text="@string/중등"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/score3"
+        app:layout_constraintStart_toStartOf="@+id/sub_level2"
+        app:layout_constraintTop_toTopOf="@+id/score3" />
+
+
+    <TextView
+        android:id="@+id/sub_level2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosans_medium"
+        android:text="@string/약"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/score2"
+        app:layout_constraintStart_toStartOf="@+id/sub_level1"
+        app:layout_constraintTop_toTopOf="@+id/score2" />
+
+    <TextView
+        android:id="@+id/score3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_18"
+        android:textColor="@color/main_theme"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/title3"
+        app:layout_constraintStart_toStartOf="@+id/score2"
+        app:layout_constraintTop_toTopOf="@+id/title3" />
+
+    <TextView
+        android:id="@+id/score2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_50"
+        android:textColor="@color/main_theme"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/title2"
+        app:layout_constraintStart_toStartOf="@+id/score1"
+        app:layout_constraintTop_toTopOf="@+id/title2" />
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosans_regular"
+        android:text="@string/향산화력"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/title2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sub_level1"
+        app:layout_constraintTop_toTopOf="@+id/skin_backgorund" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosans_regular"
+        android:text="@string/항당화능"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/title3"
+        app:layout_constraintStart_toStartOf="@+id/title1"
+        app:layout_constraintTop_toBottomOf="@+id/title1" />
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosans_regular"
+        android:text="@string/항노화력"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/skin_backgorund"
+        app:layout_constraintStart_toStartOf="@+id/title2"
+        app:layout_constraintTop_toBottomOf="@+id/title2" />
+
+    <TextView
+        android:id="@+id/score1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_42"
+        android:textColor="@color/main_theme"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/title1"
+        app:layout_constraintEnd_toStartOf="@+id/sub_level1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/skin_backgorund"
+        app:layout_constraintTop_toTopOf="@+id/title1" />
+
+    <TextView
+        android:id="@+id/sub_level1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/notosans_medium"
+        android:text="@string/약"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/score1"
+        app:layout_constraintEnd_toStartOf="@+id/title1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/score1"
+        app:layout_constraintTop_toTopOf="@+id/score1" />
+
+
+    <TextView
+        android:id="@+id/detail_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_radius_shadow"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/피부정보상세보기"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/detail_button"
+        app:layout_constraintStart_toStartOf="@+id/detail_button"
+        app:layout_constraintTop_toBottomOf="@+id/detail_button" />
+
+
+    <View
+        android:id="@+id/detail_button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/button_radius_shadow"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/skin_backgorund" />
+
+
+    <TextView
+        android:id="@+id/textView166"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/결과상세보기"
+        android:textAlignment="center"
+        android:textColor="#727272"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_button"
+        app:layout_constraintEnd_toEndOf="@+id/detail_button"
+        app:layout_constraintStart_toStartOf="@+id/detail_button"
+        app:layout_constraintTop_toTopOf="@+id/detail_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.report.Report4Activity"
+    tools:ignore="HardcodedText, ContentDescription, RtlHardcoded,RtlSymmetry">
+
+    <TextView
+        android:id="@+id/textView385"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="설문조사"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView102"
+        android:layout_width="70dp"
+        android:layout_height="53.3dp"
+        android:background="@drawable/left_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView385"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView385" />
+
+
+    <TextView
+        android:id="@+id/textView387"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/dream5"
+        android:gravity="center"
+        android:text="얼굴에 붉은 여드름이 발생한 경험이 있나요?"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView331" />
+
+    <View
+        android:id="@+id/textView331"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="#F2F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView102" />
+
+    <TextView
+        android:id="@+id/textView332"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="모니카 회원님에 대한 정보를 더 주세요"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView331" />
+
+    <TextView
+        android:id="@+id/textView386"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="설문을 작성해주시면 AI가 더욱 좋은\n제품을 추천해 드려요"
+        app:layout_constraintBottom_toBottomOf="@+id/textView331"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView332"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/cleansing_btn1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/login_background"
+        android:gravity="left|center"
+        android:paddingLeft="15dp"
+        android:text="전혀 없다"
+        android:textColor="#777777"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView387" />
+
+    <ImageView
+        android:id="@+id/cleasing_check1"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/report_check"
+        app:layout_constraintBottom_toBottomOf="@+id/cleansing_btn1"
+        app:layout_constraintEnd_toEndOf="@+id/cleansing_btn1"
+        app:layout_constraintTop_toTopOf="@+id/cleansing_btn1" />
+
+    <TextView
+        android:id="@+id/cleansing_btn2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_background"
+        android:gravity="center|left"
+        android:paddingLeft="15dp"
+        android:text="거의 없다"
+        android:textColor="#777777"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/cleansing_btn1"
+        app:layout_constraintStart_toStartOf="@+id/cleansing_btn1"
+        app:layout_constraintTop_toBottomOf="@+id/cleansing_btn1" />
+
+    <ImageView
+        android:id="@+id/cleasing_check2"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cleansing_btn2"
+        app:layout_constraintEnd_toEndOf="@+id/cleasing_check1"
+        app:layout_constraintTop_toTopOf="@+id/cleansing_btn2"
+        android:background="@drawable/report_check" />
+
+    <TextView
+        android:id="@+id/cleansing_btn3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_background"
+        android:gravity="center|left"
+        android:paddingLeft="15dp"
+        android:text="최소한 1개월에 1회 있다"
+        android:textColor="#777777"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/cleansing_btn2"
+        app:layout_constraintStart_toStartOf="@+id/cleansing_btn2"
+        app:layout_constraintTop_toBottomOf="@+id/cleansing_btn2" />
+
+    <ImageView
+        android:id="@+id/cleasing_check3"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/report_check"
+        app:layout_constraintBottom_toBottomOf="@+id/cleansing_btn3"
+        app:layout_constraintEnd_toEndOf="@+id/cleasing_check2"
+        app:layout_constraintTop_toTopOf="@+id/cleansing_btn3" />
+
+    <TextView
+        android:id="@+id/cleansing_btn4"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_background"
+        android:gravity="center|left"
+        android:paddingLeft="15dp"
+        android:text="최소한 1주일에 1회 있다"
+        android:textColor="#777777"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/cleansing_btn3"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/cleansing_btn3"
+        app:layout_constraintTop_toBottomOf="@+id/cleansing_btn3" />
+
+    <ImageView
+        android:id="@+id/cleasing_check4"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cleansing_btn4"
+        app:layout_constraintEnd_toEndOf="@+id/cleasing_check2"
+        app:layout_constraintTop_toTopOf="@+id/cleansing_btn4"
+        android:background="@drawable/report_check" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/cleansing_btn3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/cleansing_btn1"
+        tools:layout_editor_absoluteY="525dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView339"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="화장품을 사용한 뒤 피부 트러블, 발진, 가려움 혹은 따끔거리는 증상을 경험한 적이 있나요?"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/trouble_text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자주 있다"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/trouble_btn4"
+            app:layout_constraintEnd_toEndOf="@+id/trouble_btn4"
+            app:layout_constraintStart_toStartOf="@+id/trouble_btn4"
+            app:layout_constraintTop_toTopOf="@+id/trouble_btn4" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/trouble_btn3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="종종 있다"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/trouble_btn2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/trouble_btn2"
+            app:layout_constraintTop_toTopOf="@+id/trouble_btn2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/trouble_btn4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="자주 있다"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/trouble_btn5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trouble_btn2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/trouble_btn5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="화장품을\n사용하지\n않는다"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/trouble_btn4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/trouble_btn4"
+            app:layout_constraintTop_toTopOf="@+id/trouble_btn4" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/trouble_btn1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="없다"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/trouble_btn2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView339" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/trouble_btn2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="가끔 있다"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/trouble_btn1"
+            app:layout_constraintEnd_toStartOf="@+id/trouble_btn3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/trouble_btn1"
+            app:layout_constraintTop_toTopOf="@+id/trouble_btn1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sun_btn2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="약간씩\n생긴다"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sun_btn1"
+            app:layout_constraintEnd_toStartOf="@+id/sun_btn3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sun_btn1"
+            app:layout_constraintTop_toTopOf="@+id/sun_btn1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sun_btn1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="생기지\n않는다"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/sun_btn2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView345" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sun_btn3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="자주\n생긴다"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sun_btn2"
+            app:layout_constraintTop_toTopOf="@+id/sun_btn2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sun_btn4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="피부가 이미\n짙어서 주근깨가\n있는지 구분이\n어렵다"
+            android:textColor="#777777"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toStartOf="@+id/sun_btn5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sun_btn2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sun_btn5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="햇빛에\n나가지\n않는다"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sun_btn4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sun_btn4"
+            app:layout_constraintTop_toTopOf="@+id/sun_btn4" />
+
+        <TextView
+            android:id="@+id/textView345"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="햇볕에 나가면, 주근깨가 생기는 편인가요?"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/yu_btn1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="전혀 없다"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/yu_btn2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView370" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/yu_btn2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="거의 없다"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/yu_btn1"
+            app:layout_constraintEnd_toStartOf="@+id/yu_btn3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/yu_btn1"
+            app:layout_constraintTop_toTopOf="@+id/yu_btn1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/yu_btn3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="최소한\n1개월에\n1회있다"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/yu_btn1"
+            app:layout_constraintEnd_toStartOf="@+id/yu_btn4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/yu_btn2"
+            app:layout_constraintTop_toTopOf="@+id/yu_btn1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/yu_btn4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="최소한\n1주일에\n1회있다"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/yu_btn1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/yu_btn3"
+            app:layout_constraintTop_toTopOf="@+id/yu_btn1" />
+
+        <TextView
+            android:id="@+id/textView370"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="얼굴에 붉은 여드름이 발생한 경험이 있나요?"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/joo_btn1"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/detail_backgorund"
+            android:gravity="center"
+            android:text="웃거나 찡그리거나\n눈썹을 치켜 올릴\n경우에도 없다"
+            android:textColor="#777777"
+            app:layout_constraintEnd_toStartOf="@+id/joo_btn2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/textView338"
+            app:layout_constraintTop_toBottomOf="@+id/textView338" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/joo_btn2"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="@drawable/detail_backgorund"
+            android:gravity="center"
+            android:text="웃거나 찡그리거나\n눈썹을 치켜 올릴 때에\n있다"
+            android:textColor="#777777"
+            app:layout_constraintBottom_toBottomOf="@+id/joo_btn1"
+            app:layout_constraintEnd_toEndOf="@+id/textView338"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/joo_btn1"
+            app:layout_constraintTop_toTopOf="@+id/joo_btn1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/joo_btn4"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="@drawable/detail_backgorund"
+            android:gravity="center"
+            android:text="웃거나 찡그리거나 혹은\n눈썹을 치켜 올리지\n않아도 주름이 있다"
+            android:textColor="#777777"
+            app:layout_constraintBottom_toBottomOf="@+id/joo_btn3"
+            app:layout_constraintEnd_toEndOf="@+id/joo_btn2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/joo_btn3"
+            app:layout_constraintTop_toTopOf="@+id/joo_btn3" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/joo_btn3"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="@drawable/detail_backgorund"
+            android:gravity="center"
+            android:text="얼굴을 움직이거나\n움직임이 없는\n안정된 상태에서도\n약간 있다"
+            android:textColor="#777777"
+            app:layout_constraintEnd_toStartOf="@+id/joo_btn4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/joo_btn1"
+            app:layout_constraintTop_toBottomOf="@+id/joo_btn1" />
+
+        <TextView
+            android:id="@+id/textView338"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="얼굴에 주름이 있나요?"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chk_btn1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="클렌징 폼"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/chk_btn2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView382" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chk_btn2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="클렌징\n로션·크림"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/chk_btn1"
+            app:layout_constraintEnd_toStartOf="@+id/chk_btn3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chk_btn1"
+            app:layout_constraintTop_toTopOf="@+id/chk_btn1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chk_btn3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="클렌징\n오일"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/chk_btn1"
+            app:layout_constraintEnd_toStartOf="@+id/chk_btn4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chk_btn2"
+            app:layout_constraintTop_toTopOf="@+id/chk_btn1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chk_btn4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="클렌징\n워터"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/chk_btn1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chk_btn3"
+            app:layout_constraintTop_toTopOf="@+id/chk_btn1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chk_btn5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="각질 제거제"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/chk_btn6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chk_btn2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chk_btn6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="스킨(토너)"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/chk_btn5"
+            app:layout_constraintEnd_toStartOf="@+id/chk_btn7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chk_btn5"
+            app:layout_constraintTop_toTopOf="@+id/chk_btn5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chk_btn7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="로션"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/chk_btn5"
+            app:layout_constraintEnd_toStartOf="@+id/chk_btn8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chk_btn6"
+            app:layout_constraintTop_toTopOf="@+id/chk_btn5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chk_btn8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="크림\n(수분, 영양)"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/chk_btn5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chk_btn7"
+            app:layout_constraintTop_toTopOf="@+id/chk_btn5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chk_btn9"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="아이크림"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/chk_btn10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chk_btn5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chk_btn10"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="세럼·에센스"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/chk_btn9"
+            app:layout_constraintEnd_toStartOf="@+id/chk_btn11"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chk_btn9"
+            app:layout_constraintTop_toTopOf="@+id/chk_btn9" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chk_btn11"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="선크림"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/chk_btn9"
+            app:layout_constraintEnd_toStartOf="@+id/chk_btn12"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chk_btn10"
+            app:layout_constraintTop_toTopOf="@+id/chk_btn9" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chk_btn12"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="파운데이션·\nBB크림·\nCC크림"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/chk_btn9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chk_btn11"
+            app:layout_constraintTop_toTopOf="@+id/chk_btn9" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/chk_btn13"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/detail_backgorund"
+            android:text="에어쿠션"
+            android:textColor="#777777"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/chk_btn9"
+            app:layout_constraintTop_toBottomOf="@+id/chk_btn9" />
+
+        <TextView
+            android:id="@+id/textView381"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사용하는 화장품은 무엇인가요?"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView382"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="(모두 체크해주세요)"
+            app:layout_constraintEnd_toEndOf="@+id/textView381"
+            app:layout_constraintStart_toStartOf="@+id/textView381"
+            app:layout_constraintTop_toBottomOf="@+id/textView381" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView406"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/main_theme"
+        android:gravity="center"
+        android:text="다음"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

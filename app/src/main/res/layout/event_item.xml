@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/border_radius_shadow"
+    android:layout_marginBottom="20dp"
+    android:elevation="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="230dp">
+
+    <View
+        android:background="@drawable/border_radius_whilte_no_top"
+        android:id="@+id/view14"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/banner_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/view14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:textSize="14sp"
+        android:textColor="#323232"
+        android:id="@+id/event_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:text="이벤트 이름"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view14"
+        app:layout_constraintTop_toTopOf="@+id/view14"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:textColor="#929292"
+        android:textSize="14sp"
+        android:id="@+id/start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="2021.01.10"
+        app:layout_constraintBottom_toBottomOf="@+id/textView112"
+        app:layout_constraintEnd_toStartOf="@+id/textView112"
+        app:layout_constraintTop_toTopOf="@+id/textView112"
+        tools:ignore="HardcodedText"  />
+
+    <TextView
+        android:textColor="#929292"
+        android:textSize="14sp"
+        android:id="@+id/textView112"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="~"
+        app:layout_constraintBottom_toBottomOf="@+id/end_date"
+        app:layout_constraintEnd_toStartOf="@+id/end_date"
+        app:layout_constraintTop_toTopOf="@+id/end_date"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:textColor="#929292"
+        android:textSize="14sp"
+        android:id="@+id/end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:text="2021.02.25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view14"
+        app:layout_constraintTop_toTopOf="@+id/view14"
+        tools:ignore="HardcodedText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

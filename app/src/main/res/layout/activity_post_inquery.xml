@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PostInqueryActivity"
+    tools:ignore="HardcodedText, ContentDescription, RtlHardcoded,RtlSymmetry, SmallSp">
+
+    <ImageView
+        android:id="@+id/imageView109"
+        android:layout_width="70dp"
+        android:layout_height="53.3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left_arrow" />
+
+    <TextView
+        android:id="@+id/textView188"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="문의하기"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView109"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view135"
+        android:layout_width="wrap_content"
+        android:layout_height="210dp"
+        android:background="#F2F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView109" />
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:id="@+id/textView372"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="뷰켓을 이용하면서 불편한 점,\n바라는 점을 말씀해주세요"
+        app:layout_constraintBottom_toBottomOf="@+id/view135"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view135"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/textView375"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="뷰켓은 여러분과 함께 만들어가는 서비스입니다."
+        app:layout_constraintEnd_toEndOf="@+id/textView372"
+        app:layout_constraintStart_toStartOf="@+id/textView372"
+        app:layout_constraintTop_toBottomOf="@+id/textView372" />
+
+    <TextView
+        android:id="@+id/textView376"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/radius"
+        android:backgroundTint="@color/main_theme"
+        android:gravity="center"
+        android:text="자주 묻는 질문"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view135"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView375" />
+
+    <ImageView
+        android:id="@+id/imageView110"
+        android:layout_width="10dp"
+        android:layout_height="13dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/right_arrow"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/textView376"
+        app:layout_constraintEnd_toEndOf="@+id/textView376"
+        app:layout_constraintTop_toTopOf="@+id/textView376" />
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:id="@+id/textView377"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="문의 유형"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view135" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/login_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView377"
+        app:layout_constraintTop_toBottomOf="@+id/textView377" />
+
+    <TextView
+        android:id="@+id/textView378"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="@color/main_theme"
+        android:gravity="center"
+        android:text="문의하기"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView111"
+        android:layout_width="13dp"
+        android:layout_height="14dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner4"
+        app:layout_constraintEnd_toEndOf="@+id/spinner4"
+        app:layout_constraintTop_toTopOf="@+id/spinner4"
+        app:srcCompat="@drawable/down_arrow" />
+
+    <EditText
+        android:gravity="left"
+        android:hint="문의하실 내용을 작성해주세요."
+        android:padding="15dp"
+        android:textSize="14sp"
+        android:id="@+id/editTextTextPersonName11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/login_background"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/textView378"
+        app:layout_constraintEnd_toEndOf="@+id/spinner4"
+        app:layout_constraintStart_toStartOf="@+id/spinner4"
+        app:layout_constraintTop_toBottomOf="@+id/spinner4"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/textView379"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/textView380"
+        app:layout_constraintEnd_toStartOf="@+id/textView380"
+        app:layout_constraintTop_toTopOf="@+id/textView380" />
+
+    <TextView
+        android:id="@+id/textView380"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="/ 5,000"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName11"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName11" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

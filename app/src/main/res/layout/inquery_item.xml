@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <View
+        android:id="@+id/view111"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/replied_yn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/답변미완료"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/view53"
+        app:layout_constraintTop_toTopOf="@+id/view111"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textView181"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/_2021_01_30"
+        app:layout_constraintBottom_toBottomOf="@+id/replied_yn"
+        app:layout_constraintStart_toEndOf="@+id/replied_yn"
+        app:layout_constraintTop_toTopOf="@+id/replied_yn" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/하이브리드수분크림"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/reply_content"
+        app:layout_constraintStart_toStartOf="@+id/replied_yn"
+        app:layout_constraintTop_toBottomOf="@+id/replied_yn" />
+
+    <TextView
+        android:id="@+id/reply_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/상품언제쯤도착하나요"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/view111"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+
+    <View
+        android:id="@+id/view53"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="#F3F3F3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/detail_button"
+        android:layout_width="17dp"
+        android:layout_height="12dp"
+        android:background="@drawable/down_arrow"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="@+id/view53"
+        app:layout_constraintTop_toTopOf="@+id/textView181"
+        tools:ignore="KeyboardInaccessibleWidget" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/reply_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2F5F5"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view111">
+
+        <TextView
+            android:id="@+id/textView180"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_box"
+            android:gravity="center"
+            android:text="답변"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/textView184"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="2020. 12.27 14:00"
+            app:layout_constraintBottom_toBottomOf="@+id/textView180"
+            app:layout_constraintStart_toEndOf="@+id/textView180"
+            app:layout_constraintTop_toTopOf="@+id/textView180"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/reply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView180"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

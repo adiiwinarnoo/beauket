@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SettingActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView65"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_tob_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView100"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/close"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView65"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView80"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/smile"
+        app:layout_constraintEnd_toStartOf="@+id/imageView81"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view98"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/view123"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView341"
+        app:layout_constraintEnd_toStartOf="@+id/view104"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view98"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView81"
+        android:layout_width="18dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/list"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView80"
+        app:layout_constraintEnd_toStartOf="@+id/imageView82"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView80"
+        app:layout_constraintTop_toTopOf="@+id/imageView80"
+        tools:ignore="ContentDescription" />
+
+
+    <View
+        android:id="@+id/view124"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView342"
+        app:layout_constraintEnd_toStartOf="@+id/view106"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/view104"
+        app:layout_constraintTop_toBottomOf="@+id/view98"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView82"
+        android:layout_width="22dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/cart_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView81"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView81"
+        app:layout_constraintTop_toTopOf="@+id/imageView81"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/view125"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView342"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view106"
+        app:layout_constraintTop_toTopOf="@+id/view124" />
+
+    <ImageView
+        android:id="@+id/imageView83"
+        android:layout_width="23dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/ring"
+        app:layout_constraintBottom_toTopOf="@+id/imageView105"
+        app:layout_constraintStart_toStartOf="@+id/imageView100"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView84"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/sound"
+        app:layout_constraintBottom_toTopOf="@+id/imageView85"
+        app:layout_constraintEnd_toEndOf="@+id/imageView85"
+        app:layout_constraintStart_toStartOf="@+id/imageView85"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView85"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/chatchat"
+        app:layout_constraintBottom_toTopOf="@+id/imageView83"
+        app:layout_constraintEnd_toEndOf="@+id/imageView83"
+        app:layout_constraintStart_toStartOf="@+id/imageView83"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView341"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="마이페이지"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView80"
+        app:layout_constraintStart_toStartOf="@+id/imageView80"
+        app:layout_constraintTop_toBottomOf="@+id/imageView80"
+        tools:ignore="HardcodedText"  />
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/textView342"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주문내역"
+        app:layout_constraintBottom_toBottomOf="@+id/textView341"
+        app:layout_constraintEnd_toEndOf="@+id/imageView81"
+        app:layout_constraintStart_toStartOf="@+id/imageView81"
+        app:layout_constraintTop_toTopOf="@+id/textView341"
+        tools:ignore="HardcodedText"  />
+
+    <TextView
+        android:id="@+id/textView343"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="장바구니"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView342"
+        app:layout_constraintEnd_toEndOf="@+id/imageView82"
+        app:layout_constraintStart_toStartOf="@+id/imageView82"
+        app:layout_constraintTop_toTopOf="@+id/textView342"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText"  />
+
+    <TextView
+        android:fontFamily="@font/dream5"
+        android:id="@+id/textView344"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="카테고리"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/imageView100"
+        app:layout_constraintTop_toBottomOf="@+id/view107"
+        tools:ignore="HardcodedText" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/category_viewpager2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/view109"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView344" />
+
+
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/indicator"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        app:ci_drawable="@drawable/ic_purple_dot"
+        app:ci_drawable_unselected="@drawable/border_stroke_green"
+        app:layout_constraintEnd_toEndOf="@+id/category_viewpager2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_viewpager2">
+    </me.relex.circleindicator.CircleIndicator3>
+
+    <View
+        android:id="@+id/view98"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:background="#F2F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView65" />
+
+
+    <TextView
+        android:id="@+id/textView295"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/main_theme"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view98"
+        app:layout_constraintStart_toStartOf="@+id/imageView100"
+        app:layout_constraintTop_toBottomOf="@+id/imageView65" />
+
+    <TextView
+        android:id="@+id/textView340"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="님 환영합니다."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView295"
+        app:layout_constraintStart_toEndOf="@+id/textView295"
+        app:layout_constraintTop_toTopOf="@+id/textView295"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText"  />
+
+    <View
+        android:id="@+id/view104"
+        android:layout_width="0.9dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="13dp"
+        android:background="#E3E3E3"
+        app:layout_constraintBottom_toTopOf="@+id/view107"
+        app:layout_constraintEnd_toStartOf="@+id/imageView81"
+        app:layout_constraintStart_toEndOf="@+id/imageView80"
+        app:layout_constraintTop_toTopOf="@+id/view124" />
+
+    <View
+        android:id="@+id/view106"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#E3E3E3"
+        app:layout_constraintBottom_toBottomOf="@+id/view104"
+        app:layout_constraintEnd_toStartOf="@+id/imageView82"
+        app:layout_constraintStart_toEndOf="@+id/imageView81"
+        app:layout_constraintTop_toTopOf="@+id/view104" />
+
+    <View
+        android:id="@+id/view107"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginTop="10dp"
+        android:background="#F2F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView341" />
+
+    <View
+        android:id="@+id/view109"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="#F2F5F5"
+        app:layout_constraintBottom_toTopOf="@+id/imageView84"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view108"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="#F2F5F5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:fontFamily="@font/dream5"
+        android:id="@+id/setting_btn"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/stroke_green"
+        android:backgroundTint="@color/main_theme"
+        android:gravity="center"
+        android:text="로그아웃"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView364"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView364"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="left"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/button_setting_2"
+        android:text="회원탈퇴"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/setting_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintTop_toTopOf="@id/view108"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView360"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="공지사항"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView84"
+        app:layout_constraintEnd_toEndOf="@+id/category_viewpager2"
+        app:layout_constraintStart_toEndOf="@+id/imageView84"
+        app:layout_constraintTop_toTopOf="@+id/imageView84"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView361"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="FAQ"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView85"
+        app:layout_constraintEnd_toEndOf="@+id/category_viewpager2"
+        app:layout_constraintStart_toStartOf="@+id/textView360"
+        app:layout_constraintTop_toTopOf="@+id/imageView85"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView362"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="알림설정"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView83"
+        app:layout_constraintEnd_toEndOf="@+id/category_viewpager2"
+        app:layout_constraintStart_toStartOf="@+id/textView361"
+        app:layout_constraintTop_toTopOf="@+id/imageView83"
+        tools:ignore="HardcodedText" />
+    <ImageView
+        android:id="@+id/imageView86"
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        android:background="@drawable/right_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView360"
+        app:layout_constraintEnd_toEndOf="@+id/imageView87"
+        app:layout_constraintTop_toTopOf="@+id/textView360"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView87"
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/right_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView361"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView361"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView70"
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView362"
+        app:layout_constraintEnd_toEndOf="@+id/imageView87"
+        app:layout_constraintTop_toTopOf="@+id/textView362"
+        android:background="@drawable/right_arrow"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView284"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="이용약관"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView105"
+        app:layout_constraintEnd_toEndOf="@+id/category_viewpager2"
+        app:layout_constraintStart_toStartOf="@+id/textView362"
+        app:layout_constraintTop_toTopOf="@+id/imageView105"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView104"
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView284"
+        app:layout_constraintEnd_toEndOf="@+id/imageView70"
+        app:layout_constraintTop_toTopOf="@+id/textView284"
+        android:background="@drawable/right_arrow"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView1051"
+        android:layout_width="15dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="3dp"
+        android:background="@drawable/icon_new_slide_menu"
+        android:backgroundTint="#727272"
+        app:layout_constraintBottom_toTopOf="@+id/view108"
+        app:layout_constraintStart_toStartOf="@+id/imageView83"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView2841"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="사용중인 화장품 입력"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView1051"
+        app:layout_constraintEnd_toEndOf="@+id/category_viewpager2"
+        app:layout_constraintStart_toStartOf="@+id/textView362"
+        app:layout_constraintTop_toTopOf="@+id/imageView1051"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView1041"
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2841"
+        app:layout_constraintEnd_toEndOf="@+id/imageView70"
+        app:layout_constraintTop_toTopOf="@+id/textView2841"
+        android:background="@drawable/right_arrow"
+        tools:ignore="ContentDescription" />
+    <ImageView
+        android:id="@+id/imageView10411"
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView364"
+        app:layout_constraintEnd_toEndOf="@+id/imageView70"
+        app:layout_constraintTop_toTopOf="@+id/textView364"
+        android:background="@drawable/right_arrow"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView105"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/set"
+        android:backgroundTint="#727272"
+        app:layout_constraintBottom_toTopOf="@+id/imageView1051"
+        app:layout_constraintStart_toStartOf="@+id/imageView83"
+        tools:ignore="ContentDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

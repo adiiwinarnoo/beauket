@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.FindIdResultActivity"
+    tools:ignore="HardcodedText, ContentDescription, RtlHardcoded,RtlSymmetry, SmallSp">
+
+
+    <TextView
+        android:textColor="#222222"
+        android:id="@+id/textView424"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="아이디 찾기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView136"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView424"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView424"
+        app:srcCompat="@drawable/close" />
+
+    <View
+        android:background="#F2F5F5"
+        android:id="@+id/view144"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView424" />
+
+    <View
+        android:elevation="5dp"
+        android:id="@+id/view145"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view144" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/textView423"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/border_radius_black_no_bottom"
+        android:backgroundTint="#F2F5F5"
+        android:elevation="5dp"
+        android:text="아이디 찾기가 완료되었습니다."
+        app:layout_constraintEnd_toEndOf="@+id/view145"
+        app:layout_constraintStart_toStartOf="@+id/view145"
+        app:layout_constraintTop_toTopOf="@+id/view145" />
+
+    <TextView
+        android:textColor="#222222"
+        android:textStyle="bold"
+        android:elevation="5dp"
+        android:textSize="20sp"
+        android:id="@+id/textView425"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/view145"
+        app:layout_constraintEnd_toEndOf="@+id/view145"
+        app:layout_constraintStart_toStartOf="@+id/view145"
+        app:layout_constraintTop_toBottomOf="@+id/textView423" />
+
+    <TextView
+        android:elevation="10dp"
+        android:gravity="center"
+        android:backgroundTint="@color/main_theme"
+        android:background="@drawable/radius"
+        android:textColor="@color/white"
+        android:id="@+id/textView426"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:text="로그인 화면으로 이동"
+        app:layout_constraintEnd_toEndOf="@+id/view145"
+        app:layout_constraintStart_toStartOf="@+id/view145"
+        app:layout_constraintTop_toBottomOf="@+id/view145" />
+</androidx.constraintlayout.widget.ConstraintLayout>

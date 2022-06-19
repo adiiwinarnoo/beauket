@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F2F5F5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SearchActivity" >
+
+    <View
+        android:id="@+id/view116"
+        android:layout_width="wrap_content"
+        android:layout_height="53.3dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/search_bar"
+        android:ems="10"
+        android:hint="AI 추천 검색"
+        android:inputType="textPersonName"
+        android:paddingStart="20dp"
+        android:paddingBottom="3dp"
+        android:textSize="12.7sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView23"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/frameLayout7"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <View
+                android:id="@+id/view28"
+                android:layout_width="wrap_content"
+                android:layout_height="450dp"
+                android:background="@drawable/mul_button_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/skin_type_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/border_radius_gray"
+                android:paddingStart="34dp"
+                android:textColor="#929292"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/search_first"
+                app:layout_constraintBottom_toBottomOf="@+id/skin_type_spinner"
+                app:layout_constraintStart_toStartOf="@+id/skin_type_spinner"
+                app:layout_constraintTop_toTopOf="@+id/skin_type_spinner"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="13dp"
+                android:src="@drawable/down_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/skin_type_spinner"
+                app:layout_constraintEnd_toEndOf="@+id/skin_type_spinner"
+                app:layout_constraintTop_toTopOf="@+id/skin_type_spinner"
+                tools:ignore="ContentDescription" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName9"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border_radius_gray"
+                android:hint="나이"
+                android:inputType="textPersonName"
+                android:paddingStart="42dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/skin_type_spinner"
+                app:layout_constraintStart_toStartOf="@+id/skin_type_spinner"
+                app:layout_constraintTop_toBottomOf="@+id/skin_type_spinner"
+                tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/imageView30"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/search_age"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName9"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName9"
+                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName9"
+                tools:ignore="ContentDescription" />
+
+            <Spinner
+                android:textColor="#929292"
+                android:textSize="13sp"
+                android:id="@+id/skin_problem_spinner"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border_radius_gray"
+                android:paddingStart="34dp"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName9"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName9"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9"
+                tools:ignore="RtlSymmetry" />
+
+
+            <ImageView
+                android:id="@+id/imageView28"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/down_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/skin_problem_spinner"
+                app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toTopOf="@+id/skin_problem_spinner"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imageView31"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/search_ques"
+                app:layout_constraintBottom_toBottomOf="@+id/skin_problem_spinner"
+                app:layout_constraintStart_toStartOf="@+id/imageView30"
+                app:layout_constraintTop_toTopOf="@+id/skin_problem_spinner"
+                tools:ignore="ContentDescription" />
+
+
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:text="검색 결과"
+                android:textColor="#323232"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view28"
+                tools:ignore="HardcodedText" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/category_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/skin_problem_spinner" />
+
+            <me.relex.circleindicator.CircleIndicator3
+                android:id="@+id/indicator"
+                android:layout_width="50dp"
+                android:layout_height="10dp"
+                android:layout_marginBottom="25dp"
+                app:ci_drawable="@drawable/ic_purple_dot"
+                app:ci_drawable_unselected="@drawable/border_stroke_green"
+                app:layout_constraintBottom_toBottomOf="@+id/view28"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView40" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/search_button"
+        android:layout_width="35dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="17dp"
+        android:background="@null"
+        android:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName5" />
+
+    <TextView
+        android:id="@+id/textView183"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dream5"
+        android:text="AI 추천 검색"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView23"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="100dp"
+        android:layout_height="53.3dp"
+        android:background="@drawable/left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.SignUpPopupActivity">
+
+    <View
+        android:id="@+id/confirm_view"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="@color/main_theme"
+        android:text="확인"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/login_background"
+        android:gravity="center"
+        android:text="환영합니다, ${User_name}님\n\n
+저희 서비스를 이용해주셔서 감사합니다.\n\n
+${offline store}를 연결했습니다.\n"
+        android:textColor="#707070"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:id="@+id/horizntal_bar"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/confirm_view"
+        app:layout_constraintTop_toTopOf="@+id/confirm_view" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/inpu_info_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="정보입력"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/confirm_view"
+        app:layout_constraintEnd_toStartOf="@+id/horizntal_bar"
+        app:layout_constraintStart_toStartOf="@+id/confirm_view"
+        app:layout_constraintTop_toTopOf="@+id/confirm_view"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:id="@+id/confrim_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        app:layout_constraintBottom_toBottomOf="@+id/confirm_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/confirm_view"
+        app:layout_constraintTop_toTopOf="@+id/confirm_view"
+        tools:ignore="HardcodedText"  />
+
+    <TextView
+        android:id="@+id/cancel_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="확인"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/confirm_view"
+        app:layout_constraintStart_toEndOf="@+id/horizntal_bar"
+        app:layout_constraintTop_toTopOf="@+id/confirm_view"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/border_radius_white">
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/product_img"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="42.7dp"
+        android:layout_height="16.7dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/product_company"
+        app:layout_constraintStart_toEndOf="@+id/product_img"
+        app:layout_constraintTop_toTopOf="@+id/product_img"
+        app:srcCompat="@drawable/ic_ai_recomended_item"
+        tools:ignore="ContentDescription" />
+
+    <RatingBar
+        android:id="@+id/product_rating"
+        style="@style/RatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="4.7"
+        android:stepSize="0.1"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView26"
+        app:layout_constraintStart_toEndOf="@+id/imageView26"
+        app:layout_constraintTop_toTopOf="@+id/imageView26" />
+
+    <TextView
+        android:id="@+id/product_rating_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/_4_5"
+        android:textColor="#929292"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/product_rating"
+        app:layout_constraintStart_toEndOf="@+id/product_rating" />
+
+    <TextView
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:id="@+id/product_company"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/연작"
+        android:textColor="#929292"
+        android:textSize="12.7sp"
+        app:layout_constraintBottom_toTopOf="@+id/product_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView26"
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="30dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="@string/amp_asdasdasdasdasdasd_asdwdwdwdwdwdwdwdwdwdwdwd"
+        android:textColor="#000000"
+        android:textSize="12.7sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/product_company"
+        app:layout_constraintTop_toBottomOf="@+id/product_company" />
+
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/_45_000"
+        android:textColor="#000000"
+        android:textSize="14.3sp"
+        android:fontFamily="@font/noto_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/product_img"
+        app:layout_constraintStart_toStartOf="@+id/product_title"
+        app:layout_constraintTop_toBottomOf="@+id/product_title" />
+
+    <TextView
+        android:id="@+id/textView105"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/원"
+        android:textColor="#000000"
+        android:textSize="14.3sp"
+        android:fontFamily="@font/noto_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/product_price"
+        app:layout_constraintStart_toEndOf="@+id/product_price"
+        app:layout_constraintTop_toTopOf="@+id/product_price" />
+</androidx.constraintlayout.widget.ConstraintLayout>

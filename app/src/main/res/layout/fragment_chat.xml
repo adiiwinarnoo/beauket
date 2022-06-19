@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout9"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ChatFragment">
+
+    <View
+        android:id="@+id/view36"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:background="#F2F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:fontFamily="@font/dream5"
+        android:id="@+id/textView114"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="뷰톡"
+        android:textColor="#323232"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/view36"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName7"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/search_bar"
+        android:ems="10"
+        android:hint="검색"
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
+        android:paddingBottom="7dp"
+        android:textColor="#929292"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view36"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView114"
+        app:layout_constraintTop_toBottomOf="@+id/textView114"
+        tools:ignore="Autofill,HardcodedText,RtlSymmetry" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView368" />
+
+    <ImageButton
+        android:id="@+id/floating_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/ic_circle_prifile"
+        app:layout_constraintBottom_toBottomOf="@+id/chatRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/chatRecyclerView"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add_button"
+        app:layout_constraintBottom_toBottomOf="@+id/floating_button"
+        app:layout_constraintEnd_toEndOf="@+id/floating_button"
+        app:layout_constraintStart_toStartOf="@+id/floating_button"
+        app:layout_constraintTop_toTopOf="@+id/floating_button"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:id="@+id/view126"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view36"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName7"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName7" />
+
+    <TextView
+        android:id="@+id/textView368"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@color/main_theme"
+        android:gravity="center"
+        android:text="자유수다"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/spinner6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view36"
+        tools:ignore="HardcodedText"/>
+
+    <Spinner
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@drawable/no_radius_green_stroke"
+        android:id="@+id/spinner6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView368"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView368"
+        app:layout_constraintTop_toTopOf="@+id/textView368" />
+
+    <ImageView
+        android:backgroundTint="@color/main_theme"
+        android:id="@+id/imageView112"
+        android:layout_width="13dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/down_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner6"
+        app:layout_constraintEnd_toEndOf="@+id/spinner6"
+        app:layout_constraintTop_toTopOf="@+id/spinner6"
+        tools:ignore="ContentDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

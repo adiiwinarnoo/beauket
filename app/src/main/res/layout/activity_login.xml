@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginActivity"
+    tools:ignore="HardcodedText, ContentDescription, RtlHardcoded,RtlSymmetry, SmallSp">
+
+   <EditText
+       android:id="@+id/password_edit"
+       android:layout_width="0dp"
+       android:layout_height="50dp"
+       android:layout_marginTop="12dp"
+       android:background="@drawable/login_background"
+       android:hint="비밀번호"
+       android:inputType="textPassword"
+       android:paddingLeft="13dp"
+       android:textColor="#727272"
+       android:textColorHint="#727272"
+       android:textSize="14sp"
+       app:layout_constraintEnd_toEndOf="@+id/uid_textview"
+       app:layout_constraintStart_toStartOf="@+id/uid_textview"
+       app:layout_constraintTop_toBottomOf="@+id/uid_textview"
+       tools:ignore="Autofill" />
+
+   <EditText
+       android:id="@+id/uid_textview"
+       android:layout_width="0dp"
+       android:layout_height="50dp"
+       android:layout_marginStart="25dp"
+       android:layout_marginTop="24dp"
+       android:layout_marginEnd="25dp"
+       android:background="@drawable/login_background"
+       android:hint="아이디"
+       android:inputType="textPersonName"
+       android:paddingLeft="13dp"
+       android:textColor="#727272"
+       android:textColorHint="#727272"
+       android:textSize="14sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/textView99"
+       tools:ignore="Autofill" />
+
+   <ImageView
+       android:id="@+id/imageView33"
+       android:layout_width="wrap_content"
+       android:layout_height="100dp"
+       android:layout_marginTop="50dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:srcCompat="@drawable/ic_logo" />
+
+   <TextView
+       android:id="@+id/forgot_text"
+       android:layout_width="0dp"
+       android:layout_height="50dp"
+       android:layout_marginEnd="25dp"
+       android:layout_marginBottom="20dp"
+       android:background="@drawable/stroke_green"
+       android:fontFamily="@font/dream5"
+       android:gravity="center"
+       android:text="비밀번호 찾기"
+       android:textColor="@color/main_theme"
+       android:textSize="14sp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toEndOf="@+id/textView422" />
+
+   <TextView
+       android:id="@+id/textView99"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="35dp"
+       android:fontFamily="@font/dream5"
+       android:text="로그인"
+       android:textColor="@color/main_theme"
+       android:textSize="24sp"
+       android:textStyle="bold"
+       app:layout_constraintEnd_toEndOf="@+id/imageView33"
+       app:layout_constraintStart_toStartOf="@+id/imageView33"
+       app:layout_constraintTop_toBottomOf="@+id/imageView33" />
+
+   <TextView
+       android:id="@+id/login_button"
+       android:layout_width="0dp"
+       android:layout_height="60dp"
+       android:layout_marginTop="30dp"
+       android:background="@drawable/radius"
+       android:backgroundTint="@color/main_theme"
+       android:elevation="10dp"
+       android:fontFamily="@font/noto_bold"
+       android:gravity="center"
+       android:text="로그인"
+       android:textColor="#ffffff"
+       android:textSize="14sp"
+       app:layout_constraintEnd_toEndOf="@+id/password_edit"
+       app:layout_constraintStart_toStartOf="@+id/password_edit"
+       app:layout_constraintTop_toBottomOf="@+id/password_edit" />
+
+   <TextView
+       android:fontFamily="@font/dream5"
+       android:id="@+id/textView422"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:layout_marginStart="25dp"
+       android:layout_marginEnd="7dp"
+       android:background="@drawable/stroke_green"
+       android:backgroundTint="@color/main_theme"
+       android:gravity="center"
+       android:text="아이디 찾기"
+       android:textColor="@color/white"
+       android:textSize="14sp"
+       app:layout_constraintBottom_toBottomOf="@+id/forgot_text"
+       app:layout_constraintEnd_toStartOf="@+id/forgot_text"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="@+id/forgot_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

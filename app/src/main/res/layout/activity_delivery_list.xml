@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F2F5F5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DeliveryListActivity"
+    tools:ignore="HardcodedText, ContentDescription, RtlHardcoded,RtlSymmetry, SmallSp">
+
+    <TextView
+        android:fontFamily="@font/dream5"
+        android:background="@color/main_theme"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:id="@+id/addDeliveryButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:textSize="15sp"
+        android:text="배송지 추가"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:background="@color/white"
+        android:id="@+id/view72"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView60"
+        android:layout_width="70dp"
+        android:layout_height="53.3dp"
+        android:background="@drawable/left_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView279"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView279" />
+
+    <TextView
+        android:id="@+id/textView279"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="배송지 목록"
+        android:textColor="#323232"
+        app:layout_constraintBottom_toBottomOf="@+id/view72"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view72" />
+
+    <TextView
+        android:fontFamily="@font/dream5"
+        android:id="@+id/textView283"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="배송지를 선택해주세요"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/imageView60"
+        app:layout_constraintTop_toBottomOf="@+id/view72" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/delivery_list_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/addDeliveryButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView283" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

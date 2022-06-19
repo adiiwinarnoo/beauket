@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/conts_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90050101"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/img_popup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"/>
+
+    <ImageView
+        android:id="@+id/imageClose"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/close"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toTopOf="@id/img_popup"
+        app:layout_constraintEnd_toEndOf="@id/img_popup"
+        tools:ignore="ContentDescription" />
+
+   <TextView
+       android:id="@+id/tview_tittle_popup_new_home"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="30dp"
+       app:layout_constraintTop_toBottomOf="@id/imageClose"
+       app:layout_constraintStart_toStartOf="@id/img_popup"
+       app:layout_constraintEnd_toEndOf="@id/img_popup"
+       android:text="뷰켓센터 오시는길"
+       android:textStyle="bold"
+       android:textColor="@color/black"
+       android:textSize="16sp"
+       android:gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/tview_left_new"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/tview_tittle_popup_new_home"
+        app:layout_constraintStart_toStartOf="@id/img_popup"
+        android:text="주소"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+    <TextView
+        android:id="@+id/tview_left_new2"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tview_tittle_popup_new_home"
+        app:layout_constraintStart_toEndOf="@id/tview_left_new"
+        android:text="경기 하남시 미사강변동로95 힐스테이트 \n 그랑파사쥬 2층 2002호"/>
+
+    <View
+        android:id="@+id/view27"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/mul_button_bg"
+        app:layout_constraintBottom_toTopOf="@id/linear_hori_popup"
+        app:layout_constraintEnd_toEndOf="@id/img_popup"
+        app:layout_constraintStart_toStartOf="@id/img_popup"
+        app:layout_constraintTop_toBottomOf="@+id/tview_left_new2"/>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/map_for_popup"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="@id/view27"
+        app:layout_constraintStart_toStartOf="@id/view27"
+        app:layout_constraintEnd_toEndOf="@id/view27"
+        app:layout_constraintBottom_toBottomOf="@id/view27"/>
+
+    <TextView
+        android:id="@+id/confirm_text"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_popup_attendance"
+        android:backgroundTint="@color/main_theme2"
+        android:fontFamily="@font/dream5"
+        android:gravity="center"
+        android:text="확인"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/img_popup"
+        app:layout_constraintEnd_toEndOf="@id/img_popup"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/img_popup"
+        tools:ignore="HardcodedText" />
+    <LinearLayout
+        android:id="@+id/linear_hori_popup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toBottomOf="@id/view27"
+        app:layout_constraintBottom_toTopOf="@id/confirm_text"
+        app:layout_constraintStart_toStartOf="@id/img_popup"
+        app:layout_constraintEnd_toEndOf="@id/img_popup">
+<!--        <ImageView-->
+<!--            android:visibility="gone"-->
+<!--            android:id="@+id/imageMap_popup"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:src="@drawable/map_for_popup_new"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/img_popup"-->
+<!--            app:layout_constraintStart_toStartOf="@id/img_popup"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/tview_left_new2"/>-->
+
+        <LinearLayout
+            android:id="@+id/linear_location"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp">
+            <ImageView
+                android:id="@+id/imgLoca_popup"
+                android:layout_width="27dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_location_popup"
+                app:layout_constraintStart_toStartOf="@id/img_popup"
+                app:layout_constraintTop_toBottomOf="@id/tview_left_new" />
+
+            <TextView
+                android:id="@+id/tview_left_new4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="힐스테이트 그랑파사쥬 2층 2002호 뷰켓 CGV건물"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tview_left_new"
+                tools:layout_editor_absoluteX="198dp"
+                android:layout_marginStart="30dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_train"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/linear_location"
+            app:layout_constraintStart_toStartOf="@id/img_popup"
+            app:layout_constraintEnd_toEndOf="@id/img_popup">
+            <ImageView
+                android:id="@+id/image_train_popup"
+                android:layout_width="27dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_train_popup"
+                app:layout_constraintStart_toStartOf="@id/img_popup"
+                app:layout_constraintTop_toBottomOf="@id/tview_left_new" />
+
+            <TextView
+                android:id="@+id/tv_train_popup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="미사역 3번출구"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tview_left_new"
+                tools:layout_editor_absoluteX="198dp"
+                android:layout_marginStart="30dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_Car"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toBottomOf="@id/linear_train"
+            app:layout_constraintStart_toStartOf="@id/img_popup"
+            app:layout_constraintEnd_toEndOf="@id/img_popup">
+            <ImageView
+                android:id="@+id/image_car_popup"
+                android:layout_width="27dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:src="@drawable/icon_car_popup"
+                app:layout_constraintStart_toStartOf="@id/img_popup"
+                app:layout_constraintTop_toBottomOf="@id/tview_left_new" />
+
+            <TextView
+                android:id="@+id/tv_car_popup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주차정보   :   1시간 무료"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tview_left_new"
+                tools:layout_editor_absoluteX="198dp"
+                android:layout_marginStart="30dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

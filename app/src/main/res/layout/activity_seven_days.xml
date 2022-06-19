@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SevenDaysActivity">
+
+    <ImageView
+        android:id="@+id/imageView107"
+        android:layout_width="0dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/alert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView117"
+        android:layout_width="18dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/caution"
+        app:layout_constraintBottom_toBottomOf="@+id/textView390"
+        app:layout_constraintEnd_toStartOf="@+id/textView390"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/imageView107"
+        app:layout_constraintTop_toTopOf="@+id/textView390"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView119"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/close"
+        app:layout_constraintEnd_toEndOf="@+id/imageView107"
+        app:layout_constraintTop_toTopOf="@+id/imageView107"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView390"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/dream5"
+        android:text="교환, 환불 신청 안내"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/imageView107"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView117"
+        app:layout_constraintTop_toBottomOf="@+id/imageView119"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView286"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dream5"
+        android:text="확인"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView107"
+        app:layout_constraintEnd_toEndOf="@+id/view140"
+        app:layout_constraintStart_toStartOf="@+id/view140"
+        app:layout_constraintTop_toBottomOf="@+id/view140"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:id="@+id/view140"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView107"
+        app:layout_constraintEnd_toEndOf="@+id/imageView107"
+        app:layout_constraintStart_toStartOf="@+id/imageView107"
+        app:layout_constraintTop_toTopOf="@+id/imageView107"
+        app:layout_constraintVertical_bias="0.84000003" />
+
+    <TextView
+        android:textColor="#727272"
+        android:gravity="center"
+        android:id="@+id/textView399"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="교환, 환불 가능한 기간이 지났습니다.\n교환, 환불은 배송완료 후 7일 이내에 가능합니다."
+        app:layout_constraintEnd_toEndOf="@+id/textView390"
+        app:layout_constraintStart_toStartOf="@+id/imageView117"
+        app:layout_constraintTop_toBottomOf="@+id/textView390"
+        tools:ignore="HardcodedText"  />
+</androidx.constraintlayout.widget.ConstraintLayout>

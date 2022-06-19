@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="view14" type="id" />
+    <item name="banner_img" type="id" />
+    <item name="event_title" type="id" />
+    <item name="start_date" type="id" />
+</resources>

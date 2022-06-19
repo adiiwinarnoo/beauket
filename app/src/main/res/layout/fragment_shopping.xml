@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F5F5"
+    tools:context=".fragment.ShoppingFragment" >
+
+    <com.google.android.material.tabs.TabLayout
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#F2F5F5"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="@color/main_theme"
+        app:tabIndicatorFullWidth="false"
+        app:tabSelectedTextColor="@color/main_theme">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="100dp"
+            android:text="전체"
+            tools:ignore="HardcodedText"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="추천"
+            tools:ignore="HardcodedText"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="특가"
+            tools:ignore="HardcodedText" />
+
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="랭킹"
+            tools:ignore="HardcodedText"/>
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout">
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

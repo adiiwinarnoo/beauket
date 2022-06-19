@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_radius_shadow">
+
+    <TextView
+        android:fontFamily="@font/notosans_medium"
+        android:id="@+id/textView171"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/_102852485"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView176"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/__"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView171"
+        app:layout_constraintStart_toEndOf="@+id/textView171"
+        app:layout_constraintTop_toTopOf="@+id/textView171" />
+
+    <TextView
+        android:id="@+id/textView177"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/_2021_12_10"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView171"
+        app:layout_constraintStart_toEndOf="@+id/textView176"
+        app:layout_constraintTop_toTopOf="@+id/textView171" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton3"
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/right_arrow"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textView171"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView171" />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/img_9810"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView171"
+        app:layout_constraintTop_toBottomOf="@+id/textView171"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView178"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/신규등록"
+        android:textColor="#323232"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView179"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView36"
+        app:layout_constraintTop_toTopOf="@+id/imageView36"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textView179"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_bold"
+        android:text="@string/_15_000"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView36"
+        app:layout_constraintStart_toStartOf="@+id/textView178"
+        app:layout_constraintTop_toBottomOf="@+id/textView178" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

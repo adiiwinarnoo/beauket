@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout12"
+    android:layout_width="match_parent"
+    android:background="#F2F5F5"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MyPageFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view115"
+                android:layout_width="wrap_content"
+                android:layout_height="270dp"
+                android:background="@drawable/mul_button_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="@color/main_theme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/view115"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/pro2"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+                app:layout_constraintStart_toStartOf="@+id/imageView18"
+                app:layout_constraintTop_toTopOf="@+id/imageView18" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:fontFamily="@font/dream5"
+                android:text="모니카님"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/user_age_type"
+                app:layout_constraintStart_toEndOf="@+id/circleImageView"
+                app:layout_constraintTop_toTopOf="@+id/circleImageView"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:ignore="HardcodedText"/>
+
+            <TextView
+                android:id="@+id/user_age_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="33세 / 복합성 / 04S8P3W4"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/circleImageView"
+                app:layout_constraintStart_toStartOf="@+id/user_name"
+                app:layout_constraintTop_toBottomOf="@+id/user_name"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView81"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+                android:text="포인트"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+                app:layout_constraintEnd_toStartOf="@+id/textView83"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView83"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="4dp"
+                android:text="1,000"
+                android:textColor="#ffde00"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView81"
+                app:layout_constraintEnd_toEndOf="@+id/imageView18"
+                app:layout_constraintTop_toTopOf="@+id/textView81"
+                tools:ignore="HardcodedText"/>
+
+            <com.google.android.material.tabs.TabLayout
+                app:tabMaxWidth="0dp"
+                app:tabGravity="fill"
+                android:id="@+id/my_page_tab"
+                style="@style/AppTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:background="#F2F5F5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view115"
+                app:tabIndicatorColor="@color/main_theme"
+                app:tabSelectedTextColor="@color/main_theme">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="피부분석"
+                    tools:ignore="HardcodedText"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="주문내역"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="찜한상품"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="정보수정"
+                    tools:ignore="HardcodedText"/>
+            </com.google.android.material.tabs.TabLayout>
+
+            <ImageView
+                android:id="@+id/review_button"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/radius_bold"
+                app:layout_constraintEnd_toStartOf="@+id/order_button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView18"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/order_button"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:background="@drawable/radius_bold"
+                app:layout_constraintEnd_toStartOf="@+id/coupon_button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/review_button"
+                app:layout_constraintTop_toTopOf="@+id/review_button"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/cart_button"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/radius_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/coupon_button"
+                app:layout_constraintTop_toTopOf="@+id/review_button"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/coupon_button"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:background="@drawable/radius_bold"
+                app:layout_constraintEnd_toStartOf="@+id/cart_button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/order_button"
+                app:layout_constraintTop_toTopOf="@+id/order_button"
+                tools:ignore="ContentDescription" />
+
+            <FrameLayout
+                android:id="@+id/my_page_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/my_page_tab" />
+
+            <ImageView
+                android:id="@+id/imageView53"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/pencil"
+                app:layout_constraintEnd_toEndOf="@+id/review_button"
+                app:layout_constraintStart_toStartOf="@+id/review_button"
+                app:layout_constraintTop_toTopOf="@+id/review_button"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView136"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="리뷰"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView142"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/review_button"
+                app:layout_constraintTop_toBottomOf="@+id/imageView53"
+                tools:ignore="HardcodedText"/>
+
+            <TextView
+                android:id="@+id/textView142"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="2"
+                android:textColor="#F8849B"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView136"
+                app:layout_constraintEnd_toEndOf="@+id/review_button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView136"
+                app:layout_constraintTop_toTopOf="@+id/textView136"
+                tools:ignore="HardcodedText"/>
+
+            <ImageView
+                android:id="@+id/imageView54"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ask"
+                app:layout_constraintEnd_toEndOf="@+id/order_button"
+                app:layout_constraintStart_toStartOf="@+id/order_button"
+                app:layout_constraintTop_toTopOf="@+id/imageView53"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textView143"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="문의내역"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView136"
+                app:layout_constraintEnd_toStartOf="@+id/textView150"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/order_button"
+                tools:ignore="HardcodedText"/>
+
+            <TextView
+                android:id="@+id/textView144"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="쿠폰"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/textView147"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/coupon_button"
+                app:layout_constraintTop_toTopOf="@+id/textView143"
+                tools:ignore="HardcodedText"/>
+
+            <TextView
+                android:id="@+id/textView145"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="장바구니"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView144"
+                app:layout_constraintEnd_toStartOf="@+id/textView149"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/cart_button"
+                app:layout_constraintTop_toTopOf="@+id/textView144"
+                tools:ignore="HardcodedText"/>
+
+            <TextView
+                android:id="@+id/textView147"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="4"
+                android:textColor="#F8849B"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView144"
+                app:layout_constraintEnd_toEndOf="@+id/coupon_button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView144"
+                app:layout_constraintTop_toTopOf="@+id/textView144"
+                tools:ignore="HardcodedText"/>
+
+            <TextView
+                android:id="@+id/textView150"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="10"
+                android:textColor="#F8849B"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/order_button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView143"
+                app:layout_constraintTop_toTopOf="@+id/textView143"
+                tools:ignore="HardcodedText"/>
+
+            <TextView
+                android:id="@+id/textView149"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="3"
+                android:textColor="#F8849B"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView145"
+                app:layout_constraintEnd_toEndOf="@+id/cart_button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView145"
+                app:layout_constraintTop_toTopOf="@+id/textView145"
+                tools:ignore="HardcodedText"/>
+
+            <ImageView
+                android:id="@+id/imageView55"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/coupon_icon"
+                app:layout_constraintEnd_toEndOf="@+id/coupon_button"
+                app:layout_constraintStart_toStartOf="@+id/coupon_button"
+                app:layout_constraintTop_toTopOf="@+id/imageView53"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imageView56"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/cart_icon"
+                app:layout_constraintEnd_toEndOf="@+id/cart_button"
+                app:layout_constraintStart_toStartOf="@+id/cart_button"
+                app:layout_constraintTop_toTopOf="@+id/imageView55"
+                tools:ignore="ContentDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

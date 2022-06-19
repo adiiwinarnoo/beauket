@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.SelectLoginActivity">
+
+  <TextView
+      android:elevation="7dp"
+      android:background="@drawable/radius"
+      android:backgroundTint="@color/main_theme"
+      android:gravity="center"
+      android:id="@+id/sign_up_textview"
+      android:layout_width="0dp"
+      android:layout_height="53dp"
+      android:layout_marginTop="30dp"
+      android:fontFamily="@font/noto_bold"
+      android:text="회원가입"
+      android:textColor="@color/white"
+      android:textSize="14sp"
+      app:layout_constraintEnd_toEndOf="@+id/login_button"
+      app:layout_constraintStart_toStartOf="@+id/login_button"
+      app:layout_constraintTop_toBottomOf="@+id/view138"
+      tools:ignore="HardcodedText"  />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo"
+        tools:ignore="ContentDescription" />
+
+  <View
+      android:id="@+id/naver_login_button"
+      android:layout_width="0dp"
+      android:layout_height="50dp"
+      android:layout_marginTop="35dp"
+      android:background="@drawable/border_stroke_green"
+      android:backgroundTint="#1FC248"
+      android:fontFamily="@font/noto_bold"
+      app:layout_constraintEnd_toEndOf="@+id/appCompatButton5"
+      app:layout_constraintStart_toStartOf="@+id/appCompatButton5"
+      app:layout_constraintTop_toBottomOf="@+id/imageView32" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/login_button"
+      android:layout_width="0dp"
+      android:layout_height="53dp"
+      android:layout_marginTop="13dp"
+      android:background="@drawable/stroke_green"
+      android:fontFamily="@font/notosans_medium"
+      android:text="ID로 로그인"
+      android:textColor="@color/main_theme"
+      app:layout_constraintEnd_toEndOf="@+id/appCompatButton5"
+      app:layout_constraintStart_toStartOf="@+id/appCompatButton5"
+      app:layout_constraintTop_toBottomOf="@+id/appCompatButton6"
+      tools:ignore="HardcodedText"  />
+
+  <View
+      android:id="@+id/appCompatButton5"
+      android:layout_width="0dp"
+      android:layout_height="53dp"
+      android:layout_marginStart="34dp"
+      android:layout_marginTop="13dp"
+      android:layout_marginEnd="34dp"
+      android:background="@drawable/border_stroke_green"
+      android:backgroundTint="#fee802"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/naver_login_button" />
+
+  <ImageView
+      android:id="@+id/imageView20"
+      android:layout_width="20dp"
+      android:layout_height="18dp"
+      android:layout_marginStart="17dp"
+      android:background="@drawable/test_kakao"
+      app:layout_constraintBottom_toBottomOf="@+id/appCompatButton5"
+      app:layout_constraintStart_toStartOf="@+id/appCompatButton5"
+      app:layout_constraintTop_toTopOf="@+id/appCompatButton5"
+      tools:ignore="ContentDescription" />
+
+  <com.google.android.gms.common.SignInButton
+      android:id="@+id/appCompatButton6"
+      android:layout_width="0dp"
+      android:layout_height="59dp"
+      android:layout_marginStart="30dp"
+      android:layout_marginTop="13dp"
+      android:layout_marginEnd="30dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/appCompatButton5" />
+
+  <TextView
+      android:id="@+id/textView392"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/notosans_medium"
+      android:text="카카오 로그인"
+      android:textColor="#3d2223"
+      app:layout_constraintBottom_toBottomOf="@+id/appCompatButton5"
+      app:layout_constraintEnd_toEndOf="@+id/appCompatButton5"
+      app:layout_constraintStart_toStartOf="@+id/appCompatButton5"
+      app:layout_constraintTop_toTopOf="@+id/appCompatButton5"
+      tools:ignore="HardcodedText"  />
+
+  <TextView
+      android:id="@+id/textView393"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/notosans_medium"
+      android:text="네이버 로그인"
+      android:textColor="#ffffff"
+      app:layout_constraintBottom_toBottomOf="@+id/naver_login_button"
+      app:layout_constraintEnd_toEndOf="@+id/naver_login_button"
+      app:layout_constraintStart_toStartOf="@+id/naver_login_button"
+      app:layout_constraintTop_toTopOf="@+id/naver_login_button"
+      tools:ignore="HardcodedText"  />
+
+  <ImageView
+      android:id="@+id/imageView118"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/naver_logo"
+      app:layout_constraintBottom_toBottomOf="@+id/naver_login_button"
+      app:layout_constraintStart_toStartOf="@+id/imageView20"
+      app:layout_constraintTop_toTopOf="@+id/naver_login_button"
+      tools:ignore="ContentDescription" />
+
+  <View
+      android:id="@+id/view138"
+      android:layout_width="0dp"
+      android:layout_height="0.5dp"
+      android:layout_marginTop="30dp"
+      android:background="#dddddd"
+      app:layout_constraintEnd_toEndOf="@+id/login_button"
+      app:layout_constraintStart_toStartOf="@+id/login_button"
+      app:layout_constraintTop_toBottomOf="@+id/login_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

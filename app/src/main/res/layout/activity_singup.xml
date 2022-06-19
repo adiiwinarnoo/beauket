@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.SingupActivity">
+
+    <TextView
+        android:id="@+id/editTextTextPersonName10"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/border_radius_gray"
+        android:paddingStart="15dp"
+        android:gravity="center|left"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/sign_id_edit"
+        app:layout_constraintStart_toStartOf="@+id/sign_id_edit"
+        app:layout_constraintTop_toBottomOf="@+id/textView388"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/textView90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="이메일"
+        android:textColor="#727272"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_id_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sign_id_edit"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView91"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호"
+        android:textColor="#727272"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_pass_edit"
+        app:layout_constraintStart_toStartOf="@+id/textView90"
+        app:layout_constraintTop_toTopOf="@+id/sign_pass_edit"
+        tools:ignore="HardcodedText"  />
+
+    <TextView
+        android:id="@+id/textView92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 확인"
+        android:textColor="#727272"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_passchk_edit"
+        app:layout_constraintStart_toStartOf="@+id/textView91"
+        app:layout_constraintTop_toTopOf="@+id/sign_passchk_edit"
+        tools:ignore="HardcodedText"  />
+
+    <EditText
+        android:id="@+id/sign_passchk_edit"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/border_radius_gray"
+        android:ems="10"
+        android:hint="영문 숫자조합 8자리 이상 입력해주세요"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView92"
+        app:layout_constraintTop_toBottomOf="@+id/sign_pass_edit"
+        tools:ignore="Autofill,LabelFor,RtlSymmetry"/>
+
+    <EditText
+        android:id="@+id/sign_pass_edit"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/border_radius_gray"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="영문 숫자조합 8자리 이상 입력해주세요"
+        android:paddingStart="15dp"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/sign_passchk_edit"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sign_passchk_edit"
+        app:layout_constraintTop_toBottomOf="@+id/sign_id_edit"
+        tools:ignore="Autofill,LabelFor,RtlSymmetry" />
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="70dp"
+        android:layout_height="53.3dp"
+        android:background="@drawable/left_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/textView41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView41"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="회원가입"
+        android:textColor="#323232"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:id="@+id/view15"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:background="#F2F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_button" />
+
+    <EditText
+        android:id="@+id/sign_id_edit"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/border_radius_gray"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/sign_passchk_edit"
+        app:layout_constraintStart_toStartOf="@+id/sign_passchk_edit"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10"
+        tools:ignore="Autofill,LabelFor,RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/confirm_textview"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/dream5"
+        android:gravity="center"
+        android:text="다음"
+        android:textColor="#727272"
+        android:textSize="14sp"
+        android:background="#CCCCCC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view15"
+        app:layout_constraintEnd_toEndOf="@+id/view15"
+        app:layout_constraintStart_toStartOf="@+id/view15"
+        app:layout_constraintTop_toTopOf="@+id/view15"
+        app:srcCompat="@drawable/ic_logo"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView89"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임"
+        android:textColor="#727272"
+        app:layout_constraintBottom_toBottomOf="@+id/nick_name_edit"
+        app:layout_constraintStart_toStartOf="@+id/textView92"
+        app:layout_constraintTop_toTopOf="@+id/nick_name_edit"
+        tools:ignore="HardcodedText"  />
+
+    <EditText
+        android:id="@+id/nick_name_edit"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/login_background"
+        android:paddingStart="15dp"
+        android:textSize="14sp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/textView94"
+        app:layout_constraintStart_toStartOf="@+id/sign_passchk_edit"
+        app:layout_constraintTop_toBottomOf="@+id/sign_passchk_edit"
+        tools:ignore="Autofill,HardcodedText,LabelFor,RtlSymmetry"  />
+
+    <TextView
+        android:id="@+id/textView94"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/radius"
+        android:backgroundTint="#727272"
+        android:gravity="center"
+        android:text="중복확인"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/nick_name_edit"
+        app:layout_constraintEnd_toEndOf="@+id/sign_passchk_edit"
+        app:layout_constraintTop_toTopOf="@+id/nick_name_edit"
+        tools:ignore="HardcodedText"  />
+
+    <TextView
+        android:id="@+id/textView134"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="핸드폰번호"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName10"
+        app:layout_constraintStart_toStartOf="@+id/textView90"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName10"
+        tools:ignore="HardcodedText"  />
+
+    <TextView
+        android:id="@+id/textView93"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="이름"
+        app:layout_constraintBottom_toBottomOf="@+id/textView367"
+        app:layout_constraintStart_toStartOf="@+id/textView134"
+        app:layout_constraintTop_toTopOf="@+id/textView367"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView132"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="생년월일"
+        app:layout_constraintBottom_toBottomOf="@+id/textView388"
+        app:layout_constraintStart_toStartOf="@+id/textView93"
+        app:layout_constraintTop_toTopOf="@+id/textView388"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView367"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_background"
+        android:gravity="center|left"
+        android:paddingLeft="15dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView388"
+        app:layout_constraintStart_toStartOf="@+id/textView388"
+        app:layout_constraintTop_toBottomOf="@+id/view15"
+        tools:ignore="RtlHardcoded,RtlSymmetry"/>
+
+    <TextView
+        android:id="@+id/textView388"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/login_background"
+        android:gravity="center|left"
+        android:paddingStart="15dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName10"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName10"
+        app:layout_constraintTop_toBottomOf="@+id/textView367"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

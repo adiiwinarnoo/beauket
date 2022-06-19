@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".ui.MySkinResultListActivity"
+    tools:ignore="HardcodedText, ContentDescription, RtlHardcoded,RtlSymmetry, SmallSp">
+
+    <ImageView
+        android:id="@+id/view117"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView86"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/dream5"
+        android:text="검사결과 : "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/view117"
+        app:layout_constraintTop_toTopOf="@+id/view117" />
+
+    <TextView
+        android:id="@+id/textView123"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:fontFamily="@font/dream5"
+        android:text="3건"
+        android:textColor="@color/main_theme"
+        app:layout_constraintBottom_toBottomOf="@+id/textView86"
+        app:layout_constraintStart_toEndOf="@+id/textView86"
+        app:layout_constraintTop_toTopOf="@+id/textView86" />
+
+    <ImageView
+        android:id="@+id/imageView94"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/ic_top_bar"
+        app:layout_constraintEnd_toEndOf="@+id/view117"
+        app:layout_constraintStart_toStartOf="@+id/textView86"
+        app:layout_constraintTop_toBottomOf="@+id/textView86" />
+
+    <View
+        android:id="@+id/view121"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView94"
+        app:layout_constraintEnd_toStartOf="@+id/view122"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageView94"
+        app:layout_constraintTop_toTopOf="@+id/imageView94" />
+
+    <View
+        android:id="@+id/view122"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView94"
+        app:layout_constraintEnd_toEndOf="@+id/imageView94"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/view121"
+        app:layout_constraintTop_toTopOf="@+id/imageView94" />
+
+    <ImageView
+        android:id="@+id/imageView95"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/stroke_no_top"
+        app:layout_constraintBottom_toBottomOf="@+id/view117"
+        app:layout_constraintEnd_toEndOf="@+id/imageView94"
+        app:layout_constraintStart_toStartOf="@+id/imageView94"
+        app:layout_constraintTop_toBottomOf="@+id/imageView94" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/result_list_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView95"
+        app:layout_constraintEnd_toEndOf="@+id/imageView95"
+        app:layout_constraintStart_toStartOf="@+id/imageView95"
+        app:layout_constraintTop_toBottomOf="@+id/imageView94" />
+
+    <TextView
+        android:id="@+id/textView124"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="검사일자"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView94"
+        app:layout_constraintEnd_toStartOf="@+id/view122"
+        app:layout_constraintStart_toEndOf="@+id/view121"
+        app:layout_constraintTop_toTopOf="@+id/imageView94" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/textView130"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="순번"
+        app:layout_constraintBottom_toBottomOf="@+id/view121"
+        app:layout_constraintEnd_toStartOf="@+id/view121"
+        app:layout_constraintStart_toStartOf="@+id/imageView94"
+        app:layout_constraintTop_toTopOf="@+id/view121" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

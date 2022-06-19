@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/back"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProductInqueryActivity"
+    tools:ignore="HardcodedText, ContentDescription, RtlHardcoded,RtlSymmetry">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="70dp"
+        android:layout_height="53.3dp"
+        android:background="@drawable/left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:id="@+id/textView333"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상품문의"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_button" />
+
+    <View
+        android:id="@+id/view99"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:background="#F2F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_button" />
+
+    <ImageView
+        android:id="@+id/imageView74"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/border_radius_shadow"
+        app:layout_constraintBottom_toBottomOf="@+id/view99"
+        app:layout_constraintEnd_toEndOf="@+id/view99"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view99"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView75"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView74"
+        app:layout_constraintStart_toStartOf="@+id/imageView74"
+        app:layout_constraintTop_toTopOf="@+id/imageView74" />
+
+    <TextView
+        android:id="@+id/textView334"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:text="[라운드랩]"
+        app:layout_constraintStart_toEndOf="@+id/imageView75"
+        app:layout_constraintTop_toTopOf="@+id/imageView75" />
+
+    <TextView
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/textView335"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="자작나무 수분크림"
+        app:layout_constraintEnd_toEndOf="@+id/imageView74"
+        app:layout_constraintStart_toStartOf="@+id/textView334"
+        app:layout_constraintTop_toBottomOf="@+id/textView334" />
+
+    <TextView
+        android:id="@+id/textView336"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="32,000원"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView75"
+        app:layout_constraintStart_toStartOf="@+id/textView335"
+        app:layout_constraintTop_toBottomOf="@+id/textView335" />
+
+    <EditText
+        android:id="@+id/inquery_edittext"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/login_background"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="상품문의를 입력해주세요."
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view99"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/textView337"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="/ 5,000"
+        app:layout_constraintBottom_toBottomOf="@+id/inquery_edittext"
+        app:layout_constraintEnd_toEndOf="@+id/inquery_edittext" />
+
+    <TextView
+        android:id="@+id/edit_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/textView337"
+        app:layout_constraintEnd_toStartOf="@+id/textView337"
+        app:layout_constraintTop_toTopOf="@+id/textView337" />
+
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:id="@+id/inquery_button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/radius"
+        android:backgroundTint="@color/main_theme"
+        android:text="상품문의"
+        app:layout_constraintEnd_toEndOf="@+id/inquery_edittext"
+        app:layout_constraintStart_toStartOf="@+id/inquery_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/inquery_edittext" />
+</androidx.constraintlayout.widget.ConstraintLayout>

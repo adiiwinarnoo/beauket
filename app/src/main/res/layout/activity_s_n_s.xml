@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.SNSActivity">
+
+
+    <TextView
+        android:id="@+id/textView411"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:textColor="#323232"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView132"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView132"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView132"
+        android:layout_width="70dp"
+        android:layout_height="53.3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left_arrow"
+        tools:ignore="ContentDescription" />
+
+    <View
+        android:background="#F2F5F5"
+        android:id="@+id/view20"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView132" />
+
+    <ImageView
+        android:id="@+id/imageView133"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view20"
+        app:layout_constraintEnd_toEndOf="@+id/view20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view20"
+        app:srcCompat="@drawable/ic_logo"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textView412"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="이메일"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName4"
+        tools:ignore="HardcodedText"  />
+
+    <TextView
+        android:id="@+id/textView413"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="닉네임"
+        app:layout_constraintStart_toStartOf="@+id/textView412"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
+        tools:ignore="HardcodedText"  />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/login_background"
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView412"
+        app:layout_constraintTop_toBottomOf="@+id/view20"
+        tools:ignore="Autofill,LabelFor,RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName13"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/login_background"
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView413"
+        app:layout_constraintEnd_toStartOf="@+id/textView408"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
+        app:layout_constraintTop_toTopOf="@+id/textView413"
+        tools:ignore="Autofill,LabelFor,RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/textView408"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/radius"
+        android:backgroundTint="#727272"
+        android:gravity="center"
+        android:text="중복확인"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName13"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName4"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName13"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:backgroundTint="@color/main_theme"
+        android:id="@+id/textView410"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#CCCCCC"
+        android:fontFamily="@font/dream5"
+        android:gravity="center"
+        android:text="다음"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.WriteReviewActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back_button"
+        android:layout_width="100dp"
+        android:layout_height="53.3dp"
+        android:background="@drawable/left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:id="@+id/textView198"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="리뷰쓰기"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back_button"
+        tools:ignore="HardcodedText" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_button">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/back"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view61"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#F2F5F5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView45"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_radius_shadow"
+                app:layout_constraintBottom_toBottomOf="@+id/view61"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view61"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imageView57"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView45"
+                app:layout_constraintStart_toStartOf="@+id/imageView45"
+                app:layout_constraintTop_toTopOf="@+id/imageView45"
+                tools:ignore="ContentDescription" />
+            <TextView
+                android:id="@+id/textView199"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="[DEARMOMENT]"
+                app:layout_constraintStart_toEndOf="@+id/imageView57"
+                app:layout_constraintTop_toTopOf="@+id/imageView57"
+                tools:ignore="HardcodedText"  />
+
+            <TextView
+                android:id="@+id/textView200"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:text="신규상품"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/imageView45"
+                app:layout_constraintStart_toStartOf="@+id/textView199"
+                app:layout_constraintTop_toBottomOf="@+id/textView199"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView201"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:text="15,000"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView57"
+                app:layout_constraintStart_toStartOf="@+id/textView200"
+                app:layout_constraintTop_toBottomOf="@+id/textView200"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/textView202"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="원"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/textView201"
+                app:layout_constraintStart_toEndOf="@+id/textView201"
+                tools:ignore="HardcodedText" />
+
+            <RatingBar
+                android:id="@+id/ratingBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:rating="3"
+                android:stepSize="1"
+                android:theme="@style/RatingBarCustom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView203" />
+
+
+            <EditText
+                android:id="@+id/contents_edit2"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/border_radius_gray"
+                android:gravity="top"
+                android:hint="상품 후기를 작성해주세요."
+                android:paddingStart="10dp"
+                android:paddingTop="15dp"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view62"
+                tools:ignore="Autofill,HardcodedText,RtlHardcoded,RtlSymmetry,TextFields" />
+            <TextView
+                android:id="@+id/textView203"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="상품은 어떠셨나요?"
+                android:textColor="#727272"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view61"
+                tools:ignore="HardcodedText"  />
+
+            <TextView
+                android:id="@+id/textView204"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/textView205"
+                app:layout_constraintEnd_toStartOf="@+id/textView205"
+                app:layout_constraintTop_toTopOf="@+id/textView205"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+                android:id="@+id/textView205"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:text="/ 5,000"
+                app:layout_constraintBottom_toBottomOf="@+id/contents_edit2"
+                app:layout_constraintEnd_toEndOf="@+id/contents_edit2"
+                tools:ignore="HardcodedText" />
+
+
+
+            <View
+                android:id="@+id/view62"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginTop="13dp"
+                android:background="#F2F5F5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar2" />
+
+            <View
+                android:id="@+id/view64"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="25dp"
+                android:background="#EAEAEA"
+                app:layout_constraintEnd_toEndOf="@+id/attacg_img_button2"
+                app:layout_constraintStart_toStartOf="@+id/attacg_img_button2"
+                app:layout_constraintTop_toBottomOf="@+id/attacg_img_button2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/attacg_img_button2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/stroke_green"
+                android:stateListAnimator="@null"
+                android:text="이미지 첨부"
+                android:textColor="@color/main_theme"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/img_recyclerview"
+                app:layout_constraintStart_toStartOf="@+id/img_recyclerview"
+                app:layout_constraintTop_toBottomOf="@+id/img_recyclerview"
+                tools:ignore="HardcodedText" >
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/write_chat_btn2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/border_stroke_green"
+                android:text="글쓰기"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/view64"
+                app:layout_constraintStart_toStartOf="@+id/view64"
+                app:layout_constraintTop_toBottomOf="@+id/view64"
+                tools:ignore="HardcodedText" >
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/img_recyclerview"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintEnd_toEndOf="@+id/contents_edit2"
+                app:layout_constraintStart_toStartOf="@+id/contents_edit2"
+                app:layout_constraintTop_toBottomOf="@+id/contents_edit2"
+                tools:ignore="HardcodedText"  />
+
+            <ImageView
+                android:id="@+id/imageView116"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:background="@drawable/review_camera"
+                app:layout_constraintBottom_toBottomOf="@+id/img_recyclerview"
+                app:layout_constraintStart_toStartOf="@+id/contents_edit2"
+                app:layout_constraintTop_toTopOf="@+id/img_recyclerview"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

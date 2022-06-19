@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "329503669458",
+    "project_id": "mansae-cafb9",
+    "storage_bucket": "mansae-cafb9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329503669458:android:693580fb9227cc1d29010b",
+        "android_client_info": {
+          "package_name": "com.healstationlab.design"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329503669458-57ubafg0anno6pmlrn23j1be4fh46ev9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.healstationlab.design",
+            "certificate_hash": "db3b5a8c54b2cc9cca98d1ffdddf2a005419379f"
+          }
+        },
+        {
+          "client_id": "329503669458-keaf3dlffl31f39odquuimgi5bfa386h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.healstationlab.design",
+            "certificate_hash": "4dcb1cfec07b29105f89023f9bd0e677c141ef62"
+          }
+        },
+        {
+          "client_id": "329503669458-1fcrurgmo6ka08uat1unuvb0hla4o9m8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSMQktOiy0EHLARTQy1lmEKwZlc879Ly8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "329503669458-1fcrurgmo6ka08uat1unuvb0hla4o9m8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "329503669458-1blviskadfol5p5h5d5ptsg0jkl5hg9j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.digi.mansae",
+                "app_store_id": "1576152941"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.AuthActivity"
+    tools:ignore="HardcodedText, ContentDescription, RtlHardcoded,RtlSymmetry, SmallSp">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="101dp"
+                android:background="#F2F5F5"
+                android:gravity="center"
+                android:text="명의도용으로 인한 피해를 방지하기 위해\n본인인증을 실시하고 있습니다."
+                android:textColor="#323232"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
+                android:gravity="center_horizontal"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="10sp"
+                android:text="약관동의"
+                android:textColor="#323232"
+                android:textSize="13.3sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <CheckBox
+                android:id="@+id/all_checkbox"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_checkbox"
+                android:button="@null"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:text="전체동의"
+                android:textColor="#323232"
+                android:textSize="12.7sp"
+                app:layout_constraintBottom_toBottomOf="@+id/all_checkbox"
+                app:layout_constraintStart_toEndOf="@+id/all_checkbox"
+                app:layout_constraintTop_toTopOf="@+id/all_checkbox" />
+
+            <CheckBox
+                android:id="@+id/thirde_checkbox"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_checkbox"
+                android:button="@null"
+                app:layout_constraintStart_toStartOf="@+id/first_checkbox"
+                app:layout_constraintTop_toBottomOf="@+id/second_checkbox" />
+
+            <CheckBox
+                android:id="@+id/first_checkbox"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/custom_checkbox"
+                android:button="@null"
+                app:layout_constraintStart_toStartOf="@+id/all_checkbox"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <CheckBox
+                android:id="@+id/second_checkbox"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_checkbox"
+                android:button="@null"
+                app:layout_constraintStart_toStartOf="@+id/first_checkbox"
+                app:layout_constraintTop_toBottomOf="@+id/first_checkbox" />
+
+            <CheckBox
+                android:id="@+id/fouth_checkbox"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_checkbox"
+                android:button="@null"
+                app:layout_constraintStart_toStartOf="@+id/first_checkbox"
+                app:layout_constraintTop_toBottomOf="@+id/thirde_checkbox" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="16dp"
+                android:background="#dbdbdb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/all_checkbox" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:text="개인(신용)정보수집, 이용, 활용동의"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/first_checkbox"
+                app:layout_constraintStart_toEndOf="@+id/first_checkbox"
+                app:layout_constraintTop_toTopOf="@+id/first_checkbox" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="고유식별번호 처리동의"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/second_checkbox"
+                app:layout_constraintStart_toStartOf="@+id/textView14"
+                app:layout_constraintTop_toTopOf="@+id/second_checkbox" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="본인확인 이용약관"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/thirde_checkbox"
+                app:layout_constraintStart_toStartOf="@+id/textView27"
+                app:layout_constraintTop_toTopOf="@+id/thirde_checkbox" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(통신사)본인확인 이용약관"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/fouth_checkbox"
+                app:layout_constraintStart_toStartOf="@+id/textView29"
+                app:layout_constraintTop_toTopOf="@+id/fouth_checkbox" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="17dp"
+                android:background="@drawable/right_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:background="@drawable/right_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/textView29"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton4"
+                app:layout_constraintTop_toTopOf="@+id/textView29" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:background="@drawable/right_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/textView27"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton2"
+                app:layout_constraintTop_toTopOf="@+id/textView27" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:background="@drawable/right_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/textView30"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton3"
+                app:layout_constraintTop_toTopOf="@+id/textView30" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_marginTop="20dp"
+                android:background="#F2F5F5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fouth_checkbox" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="본인인증"
+                android:textColor="#323232"
+                android:textSize="13.3sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="#dbdbdb"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@+id/textView32"
+                app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName2"
+                app:layout_constraintStart_toStartOf="@+id/textView32"
+                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName2" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주민등록번호"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/first_register_number"
+                app:layout_constraintStart_toStartOf="@+id/textView33"
+                app:layout_constraintTop_toTopOf="@+id/first_register_number" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="휴대폰번호"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/spinner"
+                app:layout_constraintStart_toStartOf="@+id/textView34"
+                app:layout_constraintTop_toTopOf="@+id/spinner" />
+
+            <EditText
+                android:maxLength="11"
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/border_radius_gray"
+                android:ems="11"
+                android:hint="숫자만 입력"
+                android:inputType="number"
+                android:paddingLeft="7dp"
+                android:textColorHint="#929292"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/spinner"
+                app:layout_constraintEnd_toEndOf="@+id/auth_button"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/spinner"
+                app:layout_constraintTop_toTopOf="@+id/spinner"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:maxLength="6"
+                android:id="@+id/first_register_number"
+                android:layout_width="83.3dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border_radius_gray"
+                android:ems="10"
+                android:hint="생년월일"
+                android:inputType="number"
+                android:paddingLeft="7dp"
+                android:textColorHint="#929292"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:maxLength="1"
+                android:id="@+id/second_register_number"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/border_radius_gray"
+                android:ems="1"
+                android:inputType="number"
+                android:paddingLeft="7dp"
+                android:textColorHint="#929292"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/first_register_number"
+                app:layout_constraintStart_toEndOf="@+id/textView36"
+                app:layout_constraintTop_toTopOf="@+id/first_register_number"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/border_radius_gray"
+                android:ems="10"
+                android:hint="이름 입력"
+                android:inputType="textPersonName"
+                android:paddingLeft="7dp"
+                android:textColorHint="#929292"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view8"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="6dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="-"
+                android:textColor="#727272"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/first_register_number"
+                app:layout_constraintStart_toEndOf="@+id/first_register_number"
+                app:layout_constraintTop_toTopOf="@+id/first_register_number" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="******"
+                android:textColor="#727272"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/second_register_number"
+                app:layout_constraintStart_toEndOf="@+id/second_register_number"
+                app:layout_constraintTop_toTopOf="@+id/second_register_number" />
+
+            <View
+                android:id="@+id/auth_button"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/border_radius_dark_gray"
+                app:layout_constraintBottom_toBottomOf="@+id/first_register_number"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+                app:layout_constraintStart_toEndOf="@+id/textView37"
+                app:layout_constraintTop_toTopOf="@+id/first_register_number" />
+
+            <TextView
+                android:id="@+id/auth_request_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="인증요청"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/auth_button"
+                app:layout_constraintEnd_toEndOf="@+id/auth_button"
+                app:layout_constraintStart_toStartOf="@+id/auth_button"
+                app:layout_constraintTop_toTopOf="@+id/auth_button"
+                app:layout_constraintVertical_bias="0.428" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border_radius_gray"
+                app:layout_constraintStart_toStartOf="@+id/first_register_number"
+                app:layout_constraintTop_toBottomOf="@+id/first_register_number" />
+
+            <ImageView
+                android:id="@+id/imageView25"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/spinner"
+                app:layout_constraintEnd_toEndOf="@+id/spinner"
+                app:layout_constraintTop_toTopOf="@+id/spinner"
+                app:srcCompat="@drawable/spinner_arrow" />
+
+            <TextView
+                android:textColor="#727272"
+                android:textSize="12sp"
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="인증번호"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName8"
+                app:layout_constraintStart_toStartOf="@+id/textView33"
+                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName8" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName8"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border_radius_gray"
+                android:ems="6"
+                android:hint="인증번호 입력"
+                android:inputType="textPersonName"
+                android:paddingLeft="7dp"
+                android:textColorHint="#929292"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
+                app:layout_constraintTop_toBottomOf="@+id/spinner"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:id="@+id/timer_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:textColor="#fe614e"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName8"
+                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName8"
+                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName8" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:letterSpacing="-0.05"
+        android:lineSpacingExtra="8.3sp"
+        android:text="휴대폰 본인인증"
+        android:textColor="#323232"
+        android:textSize="13.3sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/close_button"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/close"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/confirm_button"
+        android:layout_width="match_parent"
+        android:layout_height="46.7dp"
+        android:background="#cccccc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/confirm_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="확인"
+            android:textColor="#727272"
+            android:textSize="13.3sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

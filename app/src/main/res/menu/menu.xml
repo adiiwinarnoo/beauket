@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:id="@+id/home"
+        android:title="@string/홈"/>
+
+    <item
+        android:enabled="true"
+        android:icon="@drawable/shopping"
+        android:id="@+id/shopping"
+        android:title="@string/뷰룸"/>
+
+    <item
+        android:enabled="true"
+        android:icon="@drawable/event"
+        android:id="@+id/event"
+        android:title="@string/이벤트"/>
+
+    <item
+        android:enabled="true"
+        android:icon="@drawable/chat"
+        android:id="@+id/chat"
+        android:title="@string/뷰톡"/>
+</menu>

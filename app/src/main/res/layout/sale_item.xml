@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="280dp"
+    android:background="@drawable/shadow_background_rank">
+
+    <ImageView
+        android:id="@+id/product_img"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView27"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="42.7dp"
+        android:layout_height="16.7dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/product_rating"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_img"
+        app:srcCompat="@drawable/ic_ai_recomended_item"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/rank_background"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rank_background_black"
+        tools:ignore="ContentDescription" />
+
+    <RatingBar
+        android:id="@+id/product_rating"
+        style="@style/RatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:stepSize="0.1"
+        app:layout_constraintEnd_toStartOf="@+id/product_rating_num"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/imageView27"
+        app:layout_constraintTop_toTopOf="@+id/imageView27" />
+
+    <TextView
+        android:id="@+id/product_rating_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="@string/_4_8"
+        android:textColor="#929292"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/product_rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/product_rating"
+        app:layout_constraintTop_toTopOf="@+id/product_rating" />
+
+    <TextView
+        android:id="@+id/product_company"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/루트리"
+        android:textColor="#929292"
+        android:textSize="12.7sp"
+        app:layout_constraintEnd_toEndOf="@+id/product_img"
+        app:layout_constraintStart_toStartOf="@+id/imageView27"
+        app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/캄포가닉히프레싱토너"
+        android:textColor="#000000"
+        android:textSize="12.7sp"
+        app:layout_constraintEnd_toEndOf="@+id/product_img"
+        app:layout_constraintStart_toStartOf="@+id/product_company"
+        app:layout_constraintTop_toBottomOf="@+id/product_company" />
+
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/noto_bold"
+        android:text="@string/_32_900"
+        android:textColor="#F8849B"
+        android:textSize="14.3sp"
+        app:layout_constraintStart_toStartOf="@+id/product_title"
+        app:layout_constraintTop_toBottomOf="@+id/product_title" />
+
+    <TextView
+        android:id="@+id/textView104"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="@string/원"
+        android:textColor="#000000"
+        android:textSize="12.7sp"
+        app:layout_constraintBottom_toBottomOf="@+id/product_price"
+        app:layout_constraintStart_toEndOf="@+id/product_price"
+        app:layout_constraintTop_toTopOf="@+id/product_price" />
+
+    <TextView
+        android:id="@+id/rank_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosans_medium"
+        android:text="@string/_1"
+        android:textColor="#ffffff"
+        android:textSize="12.7sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rank_background"
+        app:layout_constraintEnd_toEndOf="@+id/rank_background"
+        app:layout_constraintStart_toStartOf="@+id/rank_background"
+        app:layout_constraintTop_toTopOf="@+id/rank_background" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

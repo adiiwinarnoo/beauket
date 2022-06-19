@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".ui.login.NoDataActivity"
+    tools:ignore="HardcodedText, ContentDescription, RtlHardcoded,RtlSymmetry, SmallSp">
+
+
+    <View
+        android:id="@+id/view142"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/radius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView49"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/view142"
+        app:layout_constraintTop_toTopOf="@+id/view142"
+        app:srcCompat="@drawable/close" />
+
+
+    <ImageView
+        android:id="@+id/imageView135"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/view142"
+        app:layout_constraintStart_toStartOf="@+id/view142"
+        app:layout_constraintTop_toBottomOf="@+id/imageView49"
+        app:srcCompat="@drawable/ic_logo_horizontal" />
+
+    <TextView
+        android:id="@+id/textView300"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/dream5"
+        android:text="피부 분석 AI 데이터가 없습니다."
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/imageView135"
+        app:layout_constraintStart_toStartOf="@+id/imageView135"
+        app:layout_constraintTop_toBottomOf="@+id/imageView135" />
+
+    <TextView
+        android:id="@+id/textView389"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/notosans_regular"
+        android:includeFontPadding="false"
+        android:text="하남점 또는 다른 지점을 방문할 경우"
+        android:textColor="#727272"
+        app:layout_constraintEnd_toEndOf="@+id/textView300"
+        app:layout_constraintStart_toStartOf="@+id/textView300"
+        app:layout_constraintTop_toBottomOf="@+id/textView300" />
+
+    <TextView
+        android:id="@+id/textView419"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosans_regular"
+        android:includeFontPadding="false"
+        android:text="무료"
+        android:textColor="#FE614E"
+        app:layout_constraintEnd_toStartOf="@+id/textView420"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/textView389"
+        app:layout_constraintTop_toBottomOf="@+id/textView389" />
+
+    <TextView
+        android:id="@+id/textView420"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosans_regular"
+        android:includeFontPadding="false"
+        android:text="로 AI촬영 및 진단 가능합니다."
+        android:textColor="#727272"
+        app:layout_constraintBottom_toBottomOf="@+id/textView419"
+        app:layout_constraintEnd_toEndOf="@+id/textView389"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView419"
+        app:layout_constraintTop_toTopOf="@+id/textView419" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:fontFamily="@font/dream5"
+        android:id="@+id/textView421"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/no_top_radius"
+        android:backgroundTint="@color/main_theme"
+        android:gravity="center"
+        android:text="확인"
+        app:layout_constraintBottom_toBottomOf="@+id/view142"
+        app:layout_constraintEnd_toEndOf="@+id/view142"
+        app:layout_constraintStart_toStartOf="@+id/view142" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

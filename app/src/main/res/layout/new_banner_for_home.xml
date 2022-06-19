@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="visible"
+            android:id="@+id/constraint2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager234"
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:background="@drawable/banner_static"
+                app:layout_constraintBottom_toTopOf="@+id/view272"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_banner_static"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="@id/viewPager234"
+                app:layout_constraintEnd_toEndOf="@id/viewPager234"
+                app:layout_constraintTop_toTopOf="@id/viewPager234"
+                app:layout_constraintBottom_toBottomOf="@id/viewPager234"
+                android:text="뷰켓을 시작했다면,"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/tv_banner_static2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="@id/viewPager234"
+                app:layout_constraintEnd_toEndOf="@id/viewPager234"
+                app:layout_constraintTop_toTopOf="@id/viewPager234"
+                app:layout_constraintBottom_toBottomOf="@id/viewPager234"
+                android:text="아직 희망이 남아 있습니다."
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+
+            <me.relex.circleindicator.CircleIndicator3
+                android:id="@+id/indicator2"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="18dp"
+                app:ci_drawable="@drawable/indicator_on"
+                app:ci_drawable_unselected="@drawable/indicator_off"
+                app:layout_constraintBottom_toBottomOf="@+id/viewPager234"
+                app:layout_constraintStart_toStartOf="@+id/viewPager234" />
+
+
+            <View
+                android:id="@+id/view272"
+                android:layout_width="wrap_content"
+                android:layout_height="330dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/mul_button_bg"
+                app:layout_constraintBottom_toTopOf="@id/view292"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewPager234" />
+
+            <TextView
+                android:id="@+id/tv_tittle_new_home2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tittle_new_home"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="@font/dream5"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toTopOf="@id/view272"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageView_purple"
+                android:layout_width="0dp"
+                android:layout_marginTop="30dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/icon_purple_home_foreground"
+                app:layout_constraintBottom_toBottomOf="@id/tv_desk12"
+                app:layout_constraintEnd_toEndOf="@id/view272"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/view272"
+                app:layout_constraintTop_toBottomOf="@id/tv_tittle_new_home2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_desk12"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/deskripsi_menu_new1"
+                android:textStyle="bold"
+                android:fontFamily="@font/dream5"
+                android:layout_marginTop="20dp"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/view272"
+                app:layout_constraintEnd_toEndOf="@id/view272"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/imageView_purple"/>
+            <TextView
+                android:id="@+id/tv_desk22"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/deskripsi_menu_new2"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="90dp"
+                android:fontFamily="@font/dream5"
+                app:layout_constraintEnd_toEndOf="@id/view272"
+                app:layout_constraintStart_toStartOf="@id/view272"
+                app:layout_constraintTop_toBottomOf="@id/tv_desk12"/>
+
+            <TextView
+                android:id="@+id/tv_desk42"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:fontFamily="@font/dream5"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/deskripsi_menu_new5"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_desk12"
+                app:layout_constraintStart_toEndOf="@id/tv_desk22"/>
+            <TextView
+                android:id="@+id/tv_desk52"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/dream5"
+                android:gravity="center_horizontal"
+                android:layout_marginStart="5dp"
+                android:textSize="12sp"
+                android:text="@string/deskripsi_menu_new6"
+                app:layout_constraintStart_toEndOf="@id/tv_desk42"
+                app:layout_constraintTop_toBottomOf="@id/tv_desk12" />
+            <TextView
+                android:id="@+id/tv_desk32"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/deskripsi_menu_new3"
+                android:textStyle="bold"
+                android:fontFamily="@font/dream5"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintStart_toStartOf="@id/view272"
+                app:layout_constraintEnd_toEndOf="@id/view272"
+                android:gravity="center_horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tv_desk22"/>
+            <TextView
+                android:id="@+id/tv_desk62"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="@string/deskripsi_menu_new7"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="130dp"
+                android:fontFamily="@font/dream5"
+                app:layout_constraintStart_toStartOf="@id/view272"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_desk32"/>
+
+            <TextView
+                android:id="@+id/tv_desk72"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/dream5"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/deskripsi_menu_new8"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/tv_desk32"
+                app:layout_constraintStart_toEndOf="@id/tv_desk62"/>
+            <TextView
+                android:id="@+id/tv_desk82"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/dream5"
+                android:gravity="center_horizontal"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp"
+                android:text="@string/deskripsi_menu_new9"
+                app:layout_constraintStart_toEndOf="@id/tv_desk72"
+                app:layout_constraintTop_toBottomOf="@id/tv_desk32" />
+
+            <View
+                android:id="@+id/view292"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:background="#F2F5F5"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view272" />
+
+
+            <ImageView
+                android:id="@+id/imgNew"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="20dp"
+                app:layout_constraintDimensionRatio="1.01:1.01"
+                android:src="@drawable/img_home_new_bg"
+                app:layout_constraintBottom_toBottomOf="@id/view31"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view292" />
+
+            <View
+                android:id="@+id/view30"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:elevation="5dp"
+                android:visibility="visible"
+                android:layout_marginTop="220dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/btn_new_radius_home"
+                app:layout_constraintBottom_toBottomOf="@id/imgNew"
+                app:layout_constraintTop_toTopOf="@id/imgNew"
+                app:layout_constraintEnd_toEndOf="@id/imgNew"
+                app:layout_constraintStart_toStartOf="@id/imgNew"/>
+
+            <TextView
+                android:id="@+id/tv_desk11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lines="5"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="5dp"
+                android:textSize="12sp"
+                android:visibility="visible"
+                android:text="더 많은 정보를 학습해 사용자에게 \n 알맞는 화장품을 추천해주는 똑똑한 AI 뷰켓! \n 아직 정보가 적은 사용자를 위해 \n 뷰켓에서 준비한 뷰켓 미리보기! \n 지금 바로 확인해볼까요!?"
+                android:fontFamily="@font/dream5"
+                app:layout_constraintTop_toTopOf="@id/view30"
+                app:layout_constraintBottom_toBottomOf="@id/view30"
+                app:layout_constraintStart_toStartOf="@id/view30"
+                app:layout_constraintEnd_toEndOf="@id/view30"
+                android:gravity="center_horizontal"/>
+
+            <View
+                android:id="@+id/view31"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:background="#F2F5F5"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNew" />
+
+            <ImageView
+                android:id="@+id/imgNew2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="20dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintDimensionRatio="1:1.4"
+                android:src="@drawable/new_bg_home2"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@id/view32"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view31" />
+            <View
+                android:id="@+id/viewNew2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:elevation="5dp"
+                android:visibility="visible"
+                android:layout_marginTop="390dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/btn_new_radius_home"
+                app:layout_constraintBottom_toBottomOf="@id/imgNew2"
+                app:layout_constraintTop_toTopOf="@id/imgNew2"
+                app:layout_constraintEnd_toEndOf="@id/imgNew2"
+                app:layout_constraintStart_toStartOf="@id/imgNew2"/>
+            <TextView
+                android:id="@+id/tvNew2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:lines="3"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:elevation="5dp"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:textSize="12sp"
+                android:text="뷰켓 피부 검진 센터에 방문하면 사용자의 피부를 \n 측정하고 상담 매니저님과 상담을 받게 되는데요. \n 이때! 이 측정값이 어플 메인 화면에 나오게 됩니다."
+                android:fontFamily="@font/dream5"
+                app:layout_constraintTop_toTopOf="@id/viewNew2"
+                app:layout_constraintBottom_toBottomOf="@id/viewNew2"
+                app:layout_constraintStart_toStartOf="@id/viewNew2"
+                app:layout_constraintEnd_toEndOf="@id/viewNew2"
+                android:gravity="center_horizontal"/>
+
+            <View
+                android:id="@+id/view32"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:background="#F2F5F5"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNew2" />
+
+            <ImageView
+                android:id="@+id/imgNew3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="20dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintDimensionRatio="1:2"
+                android:src="@drawable/new_bg_home3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgNew2" />
+            <View
+                android:id="@+id/viewNew3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:elevation="5dp"
+                android:visibility="visible"
+                android:layout_marginTop="650dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/btn_new_radius_home"
+                app:layout_constraintBottom_toBottomOf="@id/imgNew3"
+                app:layout_constraintTop_toTopOf="@id/imgNew3"
+                app:layout_constraintEnd_toEndOf="@id/imgNew3"
+                app:layout_constraintStart_toStartOf="@id/imgNew3"/>
+            <TextView
+                android:id="@+id/tvNew3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:lines="4"
+                android:layout_margin="20dp"
+                android:elevation="5dp"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:textSize="12sp"
+                android:text="상담시에 봤던 결과 들이 \n 이렇게 잘 정리 되어 보여지니! \n 측정 후에도 내 피부 상태에 대해 다시 한번 더 \n 확인 할 수 있으니 정말 좋아요!"
+                android:fontFamily="@font/dream5"
+                app:layout_constraintTop_toTopOf="@id/viewNew3"
+                app:layout_constraintBottom_toBottomOf="@id/viewNew3"
+                app:layout_constraintStart_toStartOf="@id/viewNew3"
+                app:layout_constraintEnd_toEndOf="@id/viewNew3"
+                android:gravity="center_horizontal"/>
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
