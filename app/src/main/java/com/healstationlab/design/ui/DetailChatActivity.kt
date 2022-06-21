@@ -23,10 +23,7 @@ import com.healstationlab.design.adapter.CommentAdapter
 import com.healstationlab.design.adapter.HorizontalImgAdapter
 import com.healstationlab.design.adapter.PopupNewBannerAdapter
 import com.healstationlab.design.databinding.ActivityDetailChatBinding
-import com.healstationlab.design.dto.auth
-import com.healstationlab.design.dto.comment
-import com.healstationlab.design.dto.detailChat
-import com.healstationlab.design.dto.user
+import com.healstationlab.design.dto.*
 import com.healstationlab.design.model.Chat
 import com.healstationlab.design.model.Comment
 import com.healstationlab.design.model.ImageBoard
@@ -56,7 +53,7 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
     var valueMessage = ""
 
     lateinit var binding : ActivityDetailChatBinding
-    var id = 0
+    var idS = 0
     var userId = 0
     var imageDetail = ""
 
@@ -71,7 +68,7 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
 
         Constant.edit_check = false
 
-        id = intent.getIntExtra("id", 0) // 프래그먼트에서 넘어온 id
+        idS = intent.getIntExtra("id", 0) // 프래그먼트에서 넘어온 id
         userId = intent.getIntExtra("user_id",0)
 
 
@@ -97,7 +94,7 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
 //                intent.putExtra("image",imgModel)
 //                intent.putExtra("image", imgModel2)
                 intent.putExtra("image-comment",imageDetail)
-                intent.putExtra("id-comment",id)
+                intent.putExtra("id-comment",idS)
                 intent.putExtra("result-activity",-1)
                 intent.putExtra("value-message", valueMessage)
                 Log.d("edit-comment", "onCreate: ${valueMessage.toString()}")
@@ -118,7 +115,7 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
                 imgClose.setOnClickListener { popup.dismiss() }
                 buttonCancel.setOnClickListener { popup.dismiss() }
                 buttonSubmit.setOnClickListener {
-                    deleteBoard(id)
+                    deleteBoard(idS)
                     popup.dismiss()
                     Log.d("comment", App.prefs.getStringData(Constant.AUTH).toString())
                 }
@@ -135,6 +132,12 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
             "DARK_CIRCLE" -> category = "다크서클"
         }
 
+        commentAdapter?.setItemClickListener(object : CommentAdapter.ItemClickListener{
+            override fun onClick(position: Int) {
+                hideKeyboard()
+            }
+
+        })
         binding.freeText.text = "자유"
 
         /** 수다방 댓글 달기 **/
@@ -145,7 +148,7 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
                 }
             }else{
                 if(isValidasi()){
-                    postComment(id)
+                    postComment(idS)
                     hideKeyboard()
                 } else {
                     Toast.makeText(this, "댓글 내용을 입력해주세요.", Toast.LENGTH_SHORT).show()
@@ -164,7 +167,7 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
             visivleView2(binding.freeBtn, binding.freeImg, binding.freeText, binding.shareBtn, binding.shareImg, binding.shareText)
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/plain"
-            intent.putExtra(Intent.EXTRA_TEXT, "https://mansae.page.link/?link=https://api.ggumnol.net/?boardid%3D${id}&apn=com.healstationlab.design&isi=1576152941&ibi=com.digi.mansae")
+            intent.putExtra(Intent.EXTRA_TEXT, "https://mansae.page.link/?link=https://api.ggumnol.net/?boardid%3D${idS}&apn=com.healstationlab.design&isi=1576152941&ibi=com.digi.mansae")
             val chooser = Intent.createChooser(intent, "공유하기")
             startActivity(chooser)
         }
@@ -174,8 +177,8 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
             overridePendingTransition(0, R.xml.slide_right)
         }
 
-        getComment(id)
-        getCommentList(id)
+        getComment(idS)
+        getCommentList(idS)
     }
 
     /**Delete Board**/
@@ -320,7 +323,6 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
         RetrofitMansae.server.getChatComment(id = id)
             .enqueue(object : Callback<comment>{
                 override fun onFailure(call: Call<comment>, t: Throwable) {
-                    Log.d("idComment", "${t.message.toString()}")
                 }
 
                 @SuppressLint("NotifyDataSetChanged")
@@ -343,8 +345,12 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
                                 )
                             }
                             Log.d("idComment", "onResponse: ${commentList.toString()}")
-                            commentAdapter = CommentAdapter(commentList,this@DetailChatActivity)
+                            commentAdapter = CommentAdapter(response.body()!!.data as ArrayList<CommentData>,this@DetailChatActivity)
+//                            commentAdapter = CommentAdapter(comment,this@DetailChatActivity)
                             commentAdapter!!.notifyDataSetChanged()
+
+                            commentAdapter
+
 
                             binding.commentRecyclerView.apply {
                                 this.adapter = commentAdapter
@@ -400,8 +406,8 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
                 when(response.code()){
                     200 -> {
                         Toast.makeText(this@DetailChatActivity, "성공적으로 댓글을 달았습니다.", Toast.LENGTH_SHORT).show()
-                        isComment = 0
-                        getCommentList(id)
+//                        onBackPressed()
+                        getCommentList(idS)
 
                     }
 

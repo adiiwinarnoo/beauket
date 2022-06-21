@@ -16,7 +16,7 @@ data class CommentData(
     val user : CommentUser,
     val contents : String,
     val boardReComments : List<BoardReComments>?,
-    val updatedTime : String
+    val updatedTime : String,
     )
 
 data class Board(
@@ -25,6 +25,7 @@ data class Board(
     val title : String,
     val contents : String,
     val top : Boolean,
+    val createdDate : String?
 
 )
 
