@@ -162,6 +162,13 @@ interface UserInterface {
         @Body body : HashMap<String ,String>
     ) : Call<Unit>
 
+    /**Edit by adi**/
+    @POST(Constant.COMMENT_NEW)
+    fun postCommentNew(
+        @Header("Authorization") authorization : String = App.prefs.getStringData(Constant.AUTH).toString(),
+        @Path("id") id : Int,
+        @Body body : HashMap<String ,String>
+    ) : Call<Unit>
 
     /** 제품 문의 조회 **/
     @GET(Constant.INQUERY)

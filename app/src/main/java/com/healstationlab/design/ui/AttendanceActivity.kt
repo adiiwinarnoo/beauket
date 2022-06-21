@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.WindowManager
@@ -74,16 +75,22 @@ class AttendanceActivity : AppCompatActivity() {
 
         val split2 = aa2.split("-")
         binding.calendarView.addDecorators(CurrentDayDecorator2(this@AttendanceActivity, CalendarDay.from(split2[0].toInt(), split2[1].toInt(), split2[2].toInt())))
+        Log.d("onklik attendance", "onCreate: 0")
 
         binding.calendarView.setOnDateChangedListener { _, date, _ ->
             if(reat.toString() == addZero(date.toString().replace("{","").replace("}","").replace("CalendarDay",""))){
+                Log.d("onklik attendance", "onCreate: 1")
                 if(day.size==0){
+                    Log.d("onklik attendance", "onCreate: 2")
                     postCheck(test.replace("-",""))
                     val split = aa2.split("-")
                     binding.calendarView.addDecorators(CurrentDayDecorator(this@AttendanceActivity, CalendarDay.from(split[0].toInt(), split[1].toInt(), split[2].toInt())))
                 } else {
+                    Log.d("onklik attendance", "onCreate: 3")
                     for(i in 0 until day.size){
+                        Log.d("onklik attendance", "onCreate: 4")
                         if(test.replace("-","") != day[i].replace("-","")){
+                            Log.d("onklik attendance", "onCreate: 5")
                             postCheck(test.replace("-",""))
                             val split = aa2.split("-")
                             binding.calendarView.addDecorators(CurrentDayDecorator(this@AttendanceActivity, CalendarDay.from(split[0].toInt(), split[1].toInt(), split[2].toInt())))

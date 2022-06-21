@@ -1,6 +1,6 @@
 package com.healstationlab.design.dto
 
-data class comment (
+data class  comment (
     val responseCode : String,
     val message : String,
     val data : List<CommentData>,
@@ -15,15 +15,17 @@ data class CommentData(
     val board : Board,
     val user : CommentUser,
     val contents : String,
+    val boardReComments : List<BoardReComments>?,
     val updatedTime : String
-)
+    )
 
 data class Board(
     val id : Int,
     val user : CommentUser,
     val title : String,
     val contents : String,
-    val top : Boolean
+    val top : Boolean,
+
 )
 
 data class CommentUser(
@@ -36,5 +38,13 @@ data class CommentUser(
     val points : Int,
     val gender : String,
     val imageUrl : String?,
-    val username : String
+    val username : String,
+
+)
+data class BoardReComments(
+    val id : Int?,
+    val content: String?,
+    val createdAt : String?,
+    val updatedAt : String?,
+    val userData : CommentUser
 )

@@ -89,6 +89,7 @@ class Constant {
         const val CHAT_COMMENT = "boards/{id}/comments" // 수다방 댓글 조회
 //        const val POST_BOARDS = "products/{id}/inquiries" // 문의하기
         const val COMMENT = "boards/{id}/comments" // 댓글달기
+        const val COMMENT_NEW = "boards-comment/{id}" // 댓글달기
         const val OPTION = "products/{id}/options" // 제품 옵션 조회
         const val INQUERY = "users/me/product-inquiries" // 제품 문의 조회
         const val INQUERY_RESPONSE = "product-inquiries/{id}/answers" // 제품 문의응답 조회

@@ -56,7 +56,7 @@ class EditChatActivity : AppCompatActivity() {
     var imgAdpater : EditImageAdapter? = null
     val imgList : ArrayList<Any> = arrayListOf()
     var imgModel :ArrayList<Any> = arrayListOf()
-    var imgModel2 :ArrayList<ImageBoard> = arrayListOf()
+    var imgModel2 : String = ""
     var bodylist:ArrayList<MultipartBody.Part> = arrayListOf()
     var img : ImageBoard = ImageBoard("")
     var category = ""
@@ -77,6 +77,9 @@ class EditChatActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityEditChatBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val intent2 = getIntent()
+        imgModel2 = intent2.getStringExtra("image").toString()
+        Log.d("imgmodel", "onCreate editChat:  $imgModel2")
 //
 //        val bundleObject = intent.extras
 //        imgModel2 = bundleObject?.getSerializable("image") as ArrayList<ImageBoard>

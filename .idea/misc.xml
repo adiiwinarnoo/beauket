@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_attendance.xml" value="0.22" />
+        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/activity_detail_chat.xml" value="0.25" />
+        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/comment_item.xml" value="0.33" />
+        <entry key="..\:/Users/Developer/Downloads/beauket-updated/beauket-android-updated/app/src/main/res/layout/popup_attendance.xml" value="0.33" />
         <entry key="..\:/Users/adi winarno/AndroidStudioProjects/beauket/app/src/main/res/layout/activity_add_chat.xml" value="0.2" />
         <entry key="..\:/Users/adi winarno/AndroidStudioProjects/beauket/app/src/main/res/layout/activity_detail_chat.xml" value="0.264" />
         <entry key="..\:/Users/adi winarno/AndroidStudioProjects/beauket/app/src/main/res/layout/activity_edit_chat.xml" value="0.2" />

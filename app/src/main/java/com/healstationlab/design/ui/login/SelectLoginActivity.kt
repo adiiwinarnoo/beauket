@@ -177,7 +177,7 @@ class SelectLoginActivity : AppCompatActivity() {
             val v: View = signInButton.getChildAt(i)
             if (v is TextView) {
                 v.text = buttonText
-                v.typeface = Typeface.createFromAsset(assets, "font/notosans_medium.otf")
+                v.typeface = Typeface.createFromAsset(assets, "fonts/notosans_medium.otf")
                 v.setPadding(5, 0, 10, 0)
                 return
             }

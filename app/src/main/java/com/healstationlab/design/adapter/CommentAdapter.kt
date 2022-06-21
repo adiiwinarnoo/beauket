@@ -1,6 +1,7 @@
 package com.healstationlab.design.adapter
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.healstationlab.design.R
@@ -18,8 +20,11 @@ import org.w3c.dom.Text
 class CommentAdapter(private val commentList : ArrayList<Comment>,private val itemClickListener: ItemClickListener)
     : RecyclerView.Adapter<CommentAdapter.Holder>() {
 
+
+    var clickReply = ""
     lateinit var editMessage : EditText
     lateinit var replyBtn : TextView
+    lateinit var replyBtnComment : TextView
 
     interface ItemClickListener {
         fun onClick(position: Int)
@@ -38,6 +43,7 @@ class CommentAdapter(private val commentList : ArrayList<Comment>,private val it
         val view2 = LayoutInflater.from(parent.context).inflate(R.layout.activity_detail_chat, parent, false)
         editMessage = view2.findViewById(R.id.comment_edit)
         replyBtn = view.findViewById<TextView>(R.id.reply)
+        replyBtnComment = view.findViewById<TextView>(R.id.reply_comment)
 
         return Holder(view,itemClickListener)
     }
@@ -51,12 +57,33 @@ class CommentAdapter(private val commentList : ArrayList<Comment>,private val it
         private val nickname = itemView.findViewById<TextView>(R.id.nick_name)
         private val content = itemView.findViewById<TextView>(R.id.reply_content)
         private val date = itemView.findViewById<TextView>(R.id.date)
+        private val profileimgComment = itemView.findViewById<ImageView>(R.id.profile_img_comment)
+        private val nicknameComment = itemView.findViewById<TextView>(R.id.nick_name_comment)
+        private val contentComment = itemView.findViewById<TextView>(R.id.reply_content_comment)
+        private val dateComment = itemView.findViewById<TextView>(R.id.date_comment)
+
+
         init {
             replyBtn.setOnClickListener {
-                itemClickListener.onClick(adapterPosition)
+                itemClickListener.onClick(commentList[adapterPosition].idComment!!)
             }
         }
         fun bind(comment : Comment){
+            if (commentList[adapterPosition].boardReComments != null){
+                if(comment.imageUrl == "" || comment.imageUrl == "null"){
+                    Glide.with(itemView).load(R.drawable.pro2).into(profileimgComment)
+                } else {
+                    Glide.with(itemView).load(comment.imageUrl).into(profileimgComment)
+                }
+                for (i in comment.boardReComments!!){
+                    nicknameComment.text = i.userData.nickname
+                    contentComment.text = i.content
+                    dateComment.text = i.createdAt
+                }
+                replyBtnComment.isVisible = false
+
+            }
+
             if(comment.imageUrl == "" || comment.imageUrl == "null"){
                 Glide.with(itemView).load(R.drawable.pro2).into(profileimg)
             } else {
@@ -65,7 +92,9 @@ class CommentAdapter(private val commentList : ArrayList<Comment>,private val it
             nickname.text = comment.nick_name
             content.text = comment.content
             date.text = comment.date
+
         }
+
 
     }
 }

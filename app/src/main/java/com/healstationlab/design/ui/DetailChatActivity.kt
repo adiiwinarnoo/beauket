@@ -46,6 +46,9 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
     var imgModel2 : ArrayList<ImageBoard> = arrayListOf()
     var commentAdapter : CommentAdapter? = null
     var category = ""
+    var addComment = 0
+    var isComment = 0
+
 
     var skin = ""
     var type = ""
@@ -136,11 +139,19 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
 
         /** 수다방 댓글 달기 **/
         binding.commentSendBtn.setOnClickListener {
-            if(binding.commentEdit.text.toString().isNotEmpty()){
-                postComment(id)
-            } else {
-                Toast.makeText(this, "댓글 내용을 입력해주세요.", Toast.LENGTH_SHORT).show()
+            if (isComment == 1){
+                if (isValidasi()){
+                    postCommentNew(addComment)
+                }
+            }else{
+                if(isValidasi()){
+                    postComment(id)
+                    hideKeyboard()
+                } else {
+                    Toast.makeText(this, "댓글 내용을 입력해주세요.", Toast.LENGTH_SHORT).show()
+                }
             }
+
         }
 
         /** 자유 버튼 **/
@@ -172,6 +183,9 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
         RetrofitMansae.server.deleteBoard(id = id).enqueue(object : Callback<auth>{
             override fun onResponse(call: Call<auth>, response: Response<auth>) {
                 Toast.makeText(this@DetailChatActivity, "Success Delete Data", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@DetailChatActivity,MainActivity::class.java)
+                intent.putExtra("delete-comment",1)
+                startActivity(intent)
             }
 
             override fun onFailure(call: Call<auth>, t: Throwable) {
@@ -306,25 +320,29 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
         RetrofitMansae.server.getChatComment(id = id)
             .enqueue(object : Callback<comment>{
                 override fun onFailure(call: Call<comment>, t: Throwable) {
-
+                    Log.d("idComment", "${t.message.toString()}")
                 }
 
                 @SuppressLint("NotifyDataSetChanged")
                 override fun onResponse(call: Call<comment>, response: Response<comment>) {
                     when(response.body()!!.responseCode){
                         "SUCCESS" -> {
+                            Log.d("idComment", "onResponse: ${response.body()!!.data.toString()}")
                             commentList.clear()
                             for(i in response.body()!!.data){
                                 commentList.add(
                                     Comment(
+                                        i.id,
                                         R.drawable.pro1,
                                         i.user.nickname,
                                         i.contents,
                                         i.updatedTime,
-                                        i.user.imageUrl
+                                        i.user.imageUrl,
+                                        i.boardReComments
                                     )
                                 )
                             }
+                            Log.d("idComment", "onResponse: ${commentList.toString()}")
                             commentAdapter = CommentAdapter(commentList,this@DetailChatActivity)
                             commentAdapter!!.notifyDataSetChanged()
 
@@ -366,6 +384,35 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
         })
     }
 
+    /**Edit By Adi**/
+    private fun postCommentNew(id : Int){
+        val body : HashMap<String, String> = HashMap()
+        body["content"] = binding.commentEdit.text.toString()
+
+        RetrofitMansae.server.postCommentNew(
+            id = id,
+            body = body
+        ).enqueue(object : Callback<Unit>{
+            override fun onFailure(call: Call<Unit>, t: Throwable) {
+            }
+
+            override fun onResponse(call: Call<Unit>, response: Response<Unit>) {
+                when(response.code()){
+                    200 -> {
+                        Toast.makeText(this@DetailChatActivity, "성공적으로 댓글을 달았습니다.", Toast.LENGTH_SHORT).show()
+                        isComment = 0
+                        getCommentList(id)
+
+                    }
+
+                    else -> {
+                        Toast.makeText(this@DetailChatActivity, "서버에러 댓글을 못달았습니다.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        })
+    }
+
     private fun visivleView(background : ImageButton, icon : ImageView, text : TextView, background2 : ImageButton, icon2 : ImageView, text2 : TextView) {
         background.setImageResource(R.drawable.half_radius_left_green)
         icon.setColorFilter(Color.WHITE)
@@ -391,13 +438,26 @@ class DetailChatActivity : AppCompatActivity(),CommentAdapter.ItemClickListener 
         imm.hideSoftInputFromWindow(binding.commentEdit.windowToken, 0)
     }
 
+    fun showKeyboard(){
+        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED    ,0)
+    }
+
     override fun onBackPressed() {
         super.onBackPressed()
         overridePendingTransition(0, R.xml.slide_right)
     }
 
     override fun onClick(position: Int) {
-        Toast.makeText(this, "id ${id.toString()}", Toast.LENGTH_SHORT).show()
+        addComment = position
+        isComment = 1
+        showKeyboard()
         binding.commentEdit.requestFocus()
     }
+
+
+    fun isValidasi(): Boolean {
+        return binding.commentEdit.text.toString().isNotEmpty()
+    }
+
 }
